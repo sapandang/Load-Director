@@ -1,0 +1,3 @@
+#My program doesn't stop immediately after onResponse
+https://github.com/square/okhttp/issues/1739
+client.getDispatcher().getExecutorService().shutdown();

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="skd.test.TestRequests" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-09-30T08:39:19" hostname="sapan-D" time="0.005">
+  <properties/>
+  <testcase name="testwords" classname="skd.test.TestRequests" time="0.005"/>
+  <system-out><![CDATA[words are 2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

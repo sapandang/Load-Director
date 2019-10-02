@@ -1,0 +1,4 @@
+echo "tmp registering chalba"
+export PATH=$PATH:$(pwd)
+#echo PATH=$PATH:$(pwd)
+source ~/.profile
