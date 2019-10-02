@@ -31,7 +31,7 @@ public class Requests {
         Dispatcher customDispatcher = new Dispatcher(executorService);
 */
 
-         cookieHelper = new CookieHelper();
+        cookieHelper = new CookieHelper();
         client = new OkHttpClient().newBuilder()
                 .readTimeout(60, TimeUnit.SECONDS)
                 .connectTimeout(60, TimeUnit.SECONDS)
@@ -59,6 +59,16 @@ public class Requests {
                 .connectTimeout(timeout, TimeUnit.MILLISECONDS)
                 .build();
     }
+
+    public void followRedirects(boolean followRedirects)
+    {
+        client = client.newBuilder()
+                .followRedirects(followRedirects)
+                .followSslRedirects(followRedirects)
+                .build();
+    }
+
+
 
     public void closeDispatcher()
     {
@@ -102,6 +112,8 @@ public class Requests {
 //===========================================================================================
 
     public ResponseData get(String URL, Object... objects)  {
+
+       URL=patchUrl(URL,objects);
         Request.Builder reqBuilder = new Request.Builder().url(URL).get();
         reqBuilder = parseObjects(reqBuilder, objects);
 
@@ -130,6 +142,7 @@ public class Requests {
 
     public ResponseData postRaw(String URL, String body, Object... objects)  {
 
+        URL=patchUrl(URL,objects);
         RequestBody requestBody = RequestBody.create(null, body);
 
         Request.Builder requestBuilder = new Request.Builder().url(URL);
@@ -150,6 +163,7 @@ public class Requests {
 
     public ResponseData postFormData(String URL, Object... objects)  {
 
+        URL=patchUrl(URL,objects);
         RequestBody requestBody = null;
 
         //Parse the FormBody i.e : skd.chalba.requests.FormBody formBody;
@@ -235,8 +249,9 @@ public class Requests {
     }
 
 
-    public ResponseData postfile(String URL , String key, String fileName, File file) throws Exception
+    public ResponseData postfile(String URL , String key, String fileName, File file, Object... objects) throws Exception
     {
+        URL=patchUrl(URL,objects);
         MultiPartFormBody multiPartFormBody = new MultiPartFormBody();
         multiPartFormBody.add(key,fileName,file);
         return postFormData(URL,
@@ -256,8 +271,7 @@ public class Requests {
      * @param obj
      * @return
      */
-    public Request.Builder parseObjects(Request.Builder reqBuilder, Object... obj) {
-
+     Request.Builder parseObjects(Request.Builder reqBuilder, Object... obj) {
         //Parse the objects
         for (Object object : obj) {
             //headers
@@ -284,7 +298,7 @@ public class Requests {
         return reqBuilder;
     }
 
-    public AsyncResponseCallback isAsyncRequest(Object... obj){
+     AsyncResponseCallback isAsyncRequest(Object... obj){
         for (Object object : obj) {
 
             if (object instanceof AsyncResponseCallback)
@@ -294,6 +308,20 @@ public class Requests {
 
         }
         return null;
+    }
+
+
+     String patchUrl(String Url,Object... obj){
+         for (Object object : obj) {
+
+             if (object instanceof QueryParameters)
+             {
+                 QueryParameters queryParameters =  (QueryParameters) object;
+                 Url+=queryParameters.getQueryParameter();
+             }
+
+         }
+         return Url;
     }
 
 //=======================================================================================

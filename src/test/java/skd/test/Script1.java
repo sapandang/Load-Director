@@ -3,6 +3,7 @@ package skd.test;
 import skd.chalba.common.Task;
 import skd.chalba.common.TaskParams;
 import skd.chalba.interfaces.AsyncResponseCallback;
+import skd.chalba.requests.QueryParameters;
 import skd.chalba.requests.ResponseData;
 import skd.chalba.runner.ThreadCount;
 import skd.chalba.runner.ThreadSpawnDelay;
@@ -45,7 +46,10 @@ public class Script1 extends Task {
          //   responseData = requests.get("https://google.com");
           //  requests.get("https://xwww.yahoo.com");
 
-            requests.get("https://google.com/async", new AsyncResponseCallback() {
+            QueryParameters parameters = new QueryParameters();
+            parameters.add("search","nj ui -0");
+            requests.followRedirects(true);
+            requests.get("https://www.google.com/search",parameters ,new AsyncResponseCallback() {
 
                 @Override
                 public void onResponse(ResponseData arg0) {

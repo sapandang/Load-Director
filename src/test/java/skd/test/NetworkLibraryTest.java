@@ -1,6 +1,7 @@
 package skd.test;
 
 import okhttp3.*;
+import org.junit.Test;
 
 import java.io.IOException;
 
@@ -41,6 +42,18 @@ public class NetworkLibraryTest {
     public static void main(String[] args) throws Exception {
         NetworkLibraryTest networkLibraryTest = new NetworkLibraryTest();
         networkLibraryTest.run();
+    }
+
+
+    @Test
+    public void urlBuilder()
+    {
+        HttpUrl url = new HttpUrl.Builder()
+                .scheme("https")
+
+                .addQueryParameter("q", "polar bears")
+                .build();
+        System.out.println(url);
     }
 
 }

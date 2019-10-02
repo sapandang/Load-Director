@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="skd.test.RunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-10-02T18:52:32" hostname="sapan-D" time="0.005">
+  <properties/>
+  <testcase name="givenRequestParam_whenUTF8Scheme_thenEncode" classname="skd.test.RunnerTest" time="0.005"/>
+  <system-out><![CDATA[?key1=value+1&key2=value%40%21%242&key3=value%253
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
