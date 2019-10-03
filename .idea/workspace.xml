@@ -8,27 +8,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20c206e6-3159-4fab-b142-f5ab4ead7238" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/QueryParameters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/skd.test.TestRequests.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/skd.test.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/skd.test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-skd.test.TestRequests.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/input/response.ctl" beforeDir="false" afterPath="$PROJECT_DIR$/input/response.ctl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.ctl" beforeDir="false" afterPath="$PROJECT_DIR$/response.ctl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/skd/test/NetworkLibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/skd/test/NetworkLibraryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/skd/test/Script1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/skd/test/Script1.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -97,36 +78,12 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="691">
-              <caret line="70" selection-start-line="70" selection-end-line="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="139">
-              <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Script1.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="67" column="15" lean-forward="true" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
+            <state relative-caret-position="459">
+              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -204,8 +161,8 @@
         <option value="$PROJECT_DIR$/src/test/java/skd/test/NetworkLibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/QueryParameters.java" />
         <option value="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" />
         <option value="$PROJECT_DIR$/src/test/java/skd/test/Script1.java" />
+        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" />
       </list>
     </option>
   </component>
@@ -279,64 +236,12 @@
               <item name="chalba" type="462c0819:PsiDirectoryNode" />
               <item name="requests" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skd" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="skd" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.squareup.okhttp3:okhttp:3.11.0" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.squareup.okhttp3:okhttp:3.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="okhttp-3.11.0.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Gradle: com.squareup.okhttp3:okhttp:3.11.0" type="70bed36:NamedLibraryElementNode" />
-              <item name="okhttp-3.11.0.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="okhttp3" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -572,7 +477,7 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49838188" visible="true" weight="0.26693228" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49838188" visible="true" weight="0.27171314" />
       <window_info id="Structure" order="6" sideWeight="0.50161815" weight="0.27250996" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -710,16 +615,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/runner/JVMStats.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1124,20 +1019,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Script1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="70" selection-start-line="70" selection-end-line="70" />
+        <state relative-caret-position="830">
+          <caret line="67" column="15" lean-forward="true" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Script1.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="67" column="15" lean-forward="true" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
+        <state relative-caret-position="459">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

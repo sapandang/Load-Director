@@ -36,7 +36,8 @@ public class Requests {
                 .readTimeout(60, TimeUnit.SECONDS)
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .cookieJar(cookieHelper.cookieJar())
-
+                .followRedirects(false)
+                .followSslRedirects(false)
                 .build();
         client.dispatcher().setMaxRequests(Integer.MAX_VALUE);
         client.dispatcher().setMaxRequestsPerHost(Integer.MAX_VALUE);
