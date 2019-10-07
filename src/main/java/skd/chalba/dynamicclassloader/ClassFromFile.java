@@ -26,15 +26,16 @@ public class ClassFromFile {
 
         //add jars to classpath
         File dir = new File("extlib");
-        String[] extensions = new String[] {  "jar" };
-        Logger.info("Loading all the jars from " + dir.getCanonicalPath() + " including those in subdirectories");
-        List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
-        for (File filex : files) {
-            Logger.info("Loading " + filex.getCanonicalPath());
-            boolean stat=  CompilerUtils.addClassPath(filex.getCanonicalPath());
+        if(dir.exists()) {
+            String[] extensions = new String[]{"jar"};
+            Logger.info("Loading all the jars from " + dir.getCanonicalPath() + " including those in subdirectories");
+            List<File> files = (List<File>) FileUtils.listFiles(dir, extensions, true);
+            for (File filex : files) {
+                Logger.info("Loading " + filex.getCanonicalPath());
+                boolean stat = CompilerUtils.addClassPath(filex.getCanonicalPath());
 
+            }
         }
-
 
 
        Class taskClass = CompilerUtils.loadFromJava(className, javaCode);

@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class ResponseData {
 
-    static String timeFormat= "yyyyMMddHHmmss";
+    static String timeFormat= "HH:mm:ss"; //yyyy-MM-dd HH:mm:ss:SSS
     public int code;
     public String url;
     public String body;

@@ -1,6 +1,7 @@
 package skd.chalba.common;
 
 import okhttp3.*;
+import org.tinylog.Logger;
 import org.tinylog.ThreadContext;
 import skd.chalba.interfaces.AsyncResponseCallback;
 import skd.chalba.interfaces.RequestsListners;
@@ -56,6 +57,11 @@ public  class Task extends Thread {
     public void _testCompleted()
     {
         requests.closeDispatcher();
+    }
+
+    public void LOG(Object message)
+    {
+        Logger.info(message);
     }
 
 

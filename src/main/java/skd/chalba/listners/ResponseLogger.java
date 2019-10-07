@@ -24,8 +24,8 @@ public class ResponseLogger implements RequestsListners {
                     "RequestURL"+"|"+
                     "RequestSentAtMillis"+"|"+
                     "ResponseReceivedAtMillis"+"|"+
-                    "ResponseReceivedTime"+"|"+
                     "ResponseSendTime"+"|"+
+                    "ResponseReceivedTime"+"|"+
                     "ResponseTimeAtMillis");
             //header printed
             logOnce=true;
@@ -41,8 +41,8 @@ public class ResponseLogger implements RequestsListners {
                 response.url+"|"+
                 response.sentRequestAtMillis+"|"+
                 response.receivedResponseAtMillis+"|"+
-                response.receivedTimeStamp+"|"+
                 response.sendTimeStamp+"|"+
+                response.receivedTimeStamp+"|"+
                 response.responseTimeAtMillis);
 
         //System.out.println("Time Taken to write in file -> "+(System.currentTimeMillis()-startTime ));

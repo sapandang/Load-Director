@@ -1,9 +1,10 @@
 package skd.test;
 
-import org.tinylog.Logger;
+
 import skd.chalba.common.*;
 import skd.chalba.requests.*;
 import skd.chalba.runner.*;
+import skd.chalba.interfaces.*;
 
 /**
  * This is the template File for writing the load script
@@ -13,12 +14,12 @@ import skd.chalba.runner.*;
  */
 @ThreadCount(1)
 @ThreadSpawnDelay(100)
-public class TemplateScript extends Task1 {
+public class TemplateScript extends Task {
 
 
     // this constructor is required
     public TemplateScript(TaskParams taskParams) {
-        super(taskParams);
+
     }
 
     //This method is executed after constructor
@@ -46,9 +47,17 @@ public class TemplateScript extends Task1 {
             ResponseData googleResponse = requests.get("https://www.google.com/");
             System.out.println("response code " + googleResponse.code);
 
+            //create async request
+            requests.get("https://www.google.com/", new AsyncResponseCallback() {
+                @Override
+                public void onResponse(ResponseData arg0) {
+                    System.out.println(" "+arg0.body);
+                }
+            });
+
 
         } catch (Exception e) {
-            Logger.error(e);
+            LOG(e);
         }
     }
 

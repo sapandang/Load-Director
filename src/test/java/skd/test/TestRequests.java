@@ -131,6 +131,7 @@ public class TestRequests {
     @Test
     public void testAsyncGet()
     {
+
         requests.get("https://google.com", new AsyncResponseCallback() {
 
             @Override
@@ -144,34 +145,4 @@ public class TestRequests {
 
 
 
-    @Test
-    public void testwords()
-    {
-
-        String statement = "hi hoy hydy hozx";
-
-        int count=0;
-        char backup=' ';
-        for(int i=0;i<statement.length();i++)
-        {
-
-            if(statement.charAt(i)== 'z' || statement.charAt(i)== 'y' )
-            {
-                if(i<statement.length()-1)
-                {
-                    if(statement.charAt(i+1)==' ')
-                    {
-                        count++;
-                    }
-                }else
-                {
-                    count++;
-                }
-            }
-        }
-
-        System.out.println("words are "+count);
-
-
-    }
 }
