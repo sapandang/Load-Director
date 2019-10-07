@@ -26,6 +26,7 @@ public class ClassFromFile {
 
         //add jars to classpath
         File dir = new File("extlib");
+        Logger.info("Scanning Path for library "+dir.getAbsolutePath());
         if(dir.exists()) {
             String[] extensions = new String[]{"jar"};
             Logger.info("Loading all the jars from " + dir.getCanonicalPath() + " including those in subdirectories");
