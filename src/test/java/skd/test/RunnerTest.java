@@ -32,8 +32,8 @@ public class RunnerTest {
     public static void main(String[] arg)
     {
         System.out.println("load 1 start");
-        LoadDirector.registerTask(Script1.class);
-        LoadDirector.startTask(Script1.class.getName());
+        LoadDirector.registerTask(TemplateScript.class);
+        LoadDirector.startTask(TemplateScript.class.getName());
 
     }
 

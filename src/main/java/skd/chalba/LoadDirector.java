@@ -18,9 +18,13 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.*;
+import java.net.URL;
+import java.net.URLClassLoader;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Properties;
+import java.util.jar.JarEntry;
+import java.util.jar.JarFile;
 import java.util.stream.Collectors;
 
 /**
@@ -38,6 +42,7 @@ public class LoadDirector {
         Logger.info("LoadDirector Started...");
         Logger.info("Current working directory "+currentDirectory);
 
+        //loadjars(); //load the jars
 
 
         //no arguments:
@@ -143,6 +148,52 @@ public class LoadDirector {
 
     }
 
+//====================================================================
+//======================== class LOADER ==============================
+//====================================================================
+
+public static void loadjars()
+{
+
+    try {
+
+       // ClassFromFile.addSoftwareLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+        ClassFromFile.loadLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+
+        System.out.println("Loading jars");
+        String pathToJar = "/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar";
+        JarFile jarFile = new JarFile(pathToJar);
+        Enumeration<JarEntry> e = jarFile.entries();
+
+        URL[] urls = { new URL("jar:file:" + pathToJar+"!/") };
+        URLClassLoader cl = URLClassLoader.newInstance(urls);
+
+        while (e.hasMoreElements()) {
+            JarEntry je = e.nextElement();
+            if(je.isDirectory() || !je.getName().endsWith(".class")){
+                continue;
+            }
+            // -6 because of .class
+            String className = je.getName().substring(0,je.getName().length()-6);
+            className = className.replace('/', '.');
+            Class c = cl.loadClass(className);
+            System.out.println("Loading class "+className);
+        }
+
+
+    }catch (Exception e)
+    {
+            e.printStackTrace();
+            Logger.error("error loading the jar file");
+            Logger.error(e);
+    }
+
+}
+
+
+//=============================================================================
+//==================================== SERVER ==================================
+//================================================================================
 
     public static void StartServer() throws Exception
     {

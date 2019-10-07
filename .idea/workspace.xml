@@ -4,12 +4,31 @@
     <option name="SPLITTER_PROPORTION" value="0.37531278" />
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" line="286" />
+    <bookmark url="file://$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" line="337" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20c206e6-3159-4fab-b142-f5ab4ead7238" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/skd/test/TemplateScript.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/skd/test/experiements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chalba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/info.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/input/response.ctl" beforeDir="false" afterPath="$PROJECT_DIR$/input/response.ctl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registerchalba" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/response.ctl" beforeDir="false" afterPath="$PROJECT_DIR$/response.ctl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -78,15 +97,36 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+            <state relative-caret-position="808">
+              <caret line="337" column="4" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Task1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4">
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -113,6 +153,7 @@
       <find>getResource</find>
       <find>ResponseData</find>
       <find>load 1 start</find>
+      <find>classpath</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -131,7 +172,6 @@
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/common/OkHttp3CookieHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/common/ResponseData.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/File2.java" />
-        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Headers.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/ContentType.java" />
@@ -146,11 +186,9 @@
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/runner/TaskRunner.java" />
         <option value="$PROJECT_DIR$/input/File2.java" />
         <option value="$PROJECT_DIR$/src/main/resources/Task1.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" />
         <option value="$PROJECT_DIR$/src/test/java/skd/test/Task1.java" />
         <option value="$PROJECT_DIR$/src/main/resources/help.txt" />
         <option value="$PROJECT_DIR$/src/main/resources/Task1.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/tinylog.properties" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/listners/ResponseLogger.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/ResponseData.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/interfaces/AsyncResponseCallback.java" />
@@ -160,9 +198,17 @@
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/common/Task.java" />
         <option value="$PROJECT_DIR$/src/test/java/skd/test/NetworkLibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/QueryParameters.java" />
-        <option value="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/skd/test/Script1.java" />
         <option value="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" />
+        <option value="$PROJECT_DIR$/docs/registerchalba" />
+        <option value="$PROJECT_DIR$/src/test/java/skd/test/TemplateScript.java" />
+        <option value="$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClasspathHacker.java" />
+        <option value="$PROJECT_DIR$/src/test/java/skd/test/experiements.java" />
+        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/tinylog.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java" />
+        <option value="$PROJECT_DIR$/Task1.java" />
       </list>
     </option>
   </component>
@@ -184,6 +230,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,6 +241,11 @@
             <path>
               <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
               <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="extlib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -234,14 +286,115 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="skd" type="462c0819:PsiDirectoryNode" />
               <item name="chalba" type="462c0819:PsiDirectoryNode" />
-              <item name="requests" type="462c0819:PsiDirectoryNode" />
+              <item name="dynamicclassloader" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="skd" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="skd" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: net.openhft:compiler:2.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: net.openhft:compiler:2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="compiler-2.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: net.openhft:compiler:2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="compiler-2.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: net.openhft:compiler:2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="compiler-2.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="openhft" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: net.openhft:compiler:2.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="compiler-2.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="net" type="462c0819:PsiDirectoryNode" />
+              <item name="openhft" type="462c0819:PsiDirectoryNode" />
+              <item name="compiler" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.tinylog:tinylog-api:2.0.0" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.tinylog:tinylog-api:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="tinylog-api-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.tinylog:tinylog-api:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="tinylog-api-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Gradle: org.tinylog:tinylog-api:2.0.0" type="70bed36:NamedLibraryElementNode" />
+              <item name="tinylog-api-2.0.0.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="tinylog" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,34 +431,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RunnerTest">
+  <component name="RunManager" selected="Application.LoadDirector">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkLibraryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="skd.test.NetworkLibraryTest" />
-      <module name="skd.chalba.test" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <configuration name="LoadDirector" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="skd.chalba.LoadDirector" />
+      <module name="skd.chalba.main" />
+      <option name="PROGRAM_PARAMETERS" value="-f Task1.java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="skd.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RunnerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="skd.test.RunnerTest" />
-      <module name="skd.chalba.test" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="skd.test.*" />
+          <option name="PATTERN" value="skd.chalba.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -319,52 +458,64 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NetworkLibraryTest.urlBuilder" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="experiements" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="skd.test.experiements" />
+      <module name="skd.chalba.test" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="skd.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="chalba [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;skd.test.NetworkLibraryTest.urlBuilder&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
+            <option value="clean" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="chalba [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;skd.test.RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode&quot;" />
+        <option name="scriptParameters" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value=":cleanTest" />
-            <option value=":test" />
+            <option value="jar" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TestRequests.testwords" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="experiements.classLoader1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="--tests &quot;skd.test.TestRequests.testwords&quot;" />
+        <option name="scriptParameters" value="--tests &quot;skd.test.experiements.classLoader1&quot;" />
         <option name="taskDescriptions">
           <list />
         </option>
@@ -404,13 +555,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.experiements" />
+      <item itemvalue="Application.LoadDirector" />
+      <item itemvalue="Gradle.chalba [clean]" />
+      <item itemvalue="Gradle.chalba [jar]" />
+      <item itemvalue="Gradle.experiements.classLoader1" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" />
-        <item itemvalue="Gradle.NetworkLibraryTest.urlBuilder" />
-        <item itemvalue="Application.RunnerTest" />
-        <item itemvalue="Gradle.TestRequests.testwords" />
-        <item itemvalue="Application.NetworkLibraryTest" />
+        <item itemvalue="Application.LoadDirector" />
+        <item itemvalue="Gradle.chalba [clean]" />
+        <item itemvalue="Gradle.chalba [jar]" />
+        <item itemvalue="Application.experiements" />
+        <item itemvalue="Gradle.experiements.classLoader1" />
       </list>
     </recent_temporary>
   </component>
@@ -428,21 +586,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="TestRequests_testwords - 2019.09.30 at 14h 09m 19s.xml">
-      <configuration name="TestRequests.testwords" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="NetworkLibraryTest_urlBuilder - 2019.10.02 at 23h 05m 23s.xml">
-      <configuration name="NetworkLibraryTest.urlBuilder" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="NetworkLibraryTest_urlBuilder - 2019.10.02 at 23h 05m 53s.xml">
-      <configuration name="NetworkLibraryTest.urlBuilder" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="RunnerTest_givenRequestParam_whenUTF8Scheme_thenEncode - 2019.10.02 at 23h 43m 28s.xml">
-      <configuration name="RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="RunnerTest_givenRequestParam_whenUTF8Scheme_thenEncode - 2019.10.02 at 23h 43m 57s.xml">
-      <configuration name="RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="RunnerTest_givenRequestParam_whenUTF8Scheme_thenEncode - 2019.10.02 at 23h 46m 21s.xml">
       <configuration name="RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -457,6 +600,21 @@
     </history-entry>
     <history-entry file="RunnerTest_givenRequestParam_whenUTF8Scheme_thenEncode - 2019.10.03 at 00h 22m 33s.xml">
       <configuration name="RunnerTest.givenRequestParam_whenUTF8Scheme_thenEncode" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="experiements_classLoader1 - 2019.10.04 at 12h 18m 10s.xml">
+      <configuration name="experiements.classLoader1" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="experiements_classLoader1 - 2019.10.04 at 12h 51m 47s.xml">
+      <configuration name="experiements.classLoader1" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="experiements_classLoader1 - 2019.10.04 at 12h 53m 21s.xml">
+      <configuration name="experiements.classLoader1" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="experiements_classLoader1 - 2019.10.04 at 12h 55m 04s.xml">
+      <configuration name="experiements.classLoader1" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="experiements_classLoader1 - 2019.10.04 at 12h 55m 33s.xml">
+      <configuration name="experiements.classLoader1" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -477,11 +635,11 @@
       <window_info id="UI Designer" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49838188" visible="true" weight="0.27171314" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" sideWeight="0.49838188" visible="true" weight="0.30517927" />
       <window_info id="Structure" order="6" sideWeight="0.50161815" weight="0.27250996" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996016" weight="0.431677" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32954547" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4996016" weight="0.47981367" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3993808" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -489,7 +647,7 @@
       <window_info anchor="bottom" id="SBT Execute" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="SBT Console" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4996016" weight="0.4673913" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4996016" weight="0.89285713" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003984" side_tool="true" weight="0.4876161" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.32847896" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32817337" />
@@ -615,142 +773,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/runner/JVMStats.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="3" selection-start-line="5" selection-end-line="5" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/Logger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="28" column="63" selection-start-line="28" selection-start-column="63" selection-end-line="28" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/provider/ProviderRegistry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="952">
-          <caret line="73" column="64" selection-start-line="73" selection-start-column="64" selection-end-line="73" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-impl/2.0.0/1f7dc350c141e0eee5fc6e7f78a1ecf07b2a8f6a/tinylog-impl-2.0.0-sources.jar!/org/tinylog/writers/FileWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="51" selection-start-line="42" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-impl/2.0.0/1f7dc350c141e0eee5fc6e7f78a1ecf07b2a8f6a/tinylog-impl-2.0.0-sources.jar!/org/tinylog/writers/Writer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="23" column="17" selection-start-line="23" selection-start-column="17" selection-end-line="23" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-impl/2.0.0/1f7dc350c141e0eee5fc6e7f78a1ecf07b2a8f6a/tinylog-impl-2.0.0-sources.jar!/org/tinylog/core/LogEntryValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-impl/2.0.0/1f7dc350c141e0eee5fc6e7f78a1ecf07b2a8f6a/tinylog-impl-2.0.0-sources.jar!/org/tinylog/core/ConfigurationParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1207">
-          <caret line="98" column="48" selection-start-line="98" selection-start-column="48" selection-end-line="98" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-impl/2.0.0/1f7dc350c141e0eee5fc6e7f78a1ecf07b2a8f6a/tinylog-impl-2.0.0-sources.jar!/org/tinylog/core/LogEntry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="123" column="14" selection-start-line="123" selection-start-column="8" selection-end-line="123" selection-end-column="14" />
-          <folding>
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#2967#2968#0" expanded="true" />
-            <element signature="e#3090#3091#0" expanded="true" />
-            <element signature="e#3110#3111#0" expanded="true" />
-            <element signature="e#3286#3287#0" expanded="true" />
-            <element signature="e#3307#3308#0" expanded="true" />
-            <element signature="e#3452#3453#0" expanded="true" />
-            <element signature="e#3475#3476#0" expanded="true" />
-            <element signature="e#3803#3804#0" expanded="true" />
-            <element signature="e#3825#3826#0" expanded="true" />
-            <element signature="e#4296#4297#0" expanded="true" />
-            <element signature="e#4315#4316#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.11.0/cf16b99519850b1adc3b259c90fd8566a0f592f3/okhttp-3.11.0-sources.jar!/okhttp3/Call.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="56" column="10" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/debugLoss.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/ThreadContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="29" column="19" selection-start-line="29" selection-start-column="19" selection-end-line="29" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/TaggedLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="237" column="23" lean-forward="true" selection-start-line="237" selection-start-column="23" selection-end-line="237" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/provider/LoggingProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="90" column="9" selection-start-line="90" selection-start-column="9" selection-end-line="90" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/File1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/input/File2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="16" lean-forward="true" selection-end-line="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/net/URL.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="304" column="18" selection-start-line="304" selection-start-column="18" selection-end-line="304" selection-end-column="18" />
-          <folding>
-            <element signature="e#9682#9683#0" expanded="true" />
-            <element signature="e#9714#9715#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/commons-io/commons-io/2.6/2566800dc841d9d2c5a0d34d807e45d4107dbbdf/commons-io-2.6-sources.jar!/org/apache/commons/io/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -792,13 +814,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/tinylog.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -890,23 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/runner/TaskRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="53" selection-start-line="53" selection-end-line="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/TestLogger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -938,26 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="283" selection-start-line="283" selection-end-line="283" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Task1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1009,10 +987,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
+        <state relative-caret-position="408">
+          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/runner/JVMStats.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/input/chalba.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/registerchalba">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="18" selection-start-line="1" selection-end-line="1" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/runner/TaskRunner.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1021,7 +1029,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Script1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="830">
+        <state relative-caret-position="1105">
           <caret line="67" column="15" lean-forward="true" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1029,13 +1037,144 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java">
+    <entry file="file://$PROJECT_DIR$/input/Task1.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="39" column="41" selection-start-line="39" selection-start-column="41" selection-end-line="39" selection-end-column="41" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="14" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/RunnerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="41" column="31" lean-forward="true" selection-start-line="41" selection-start-column="31" selection-end-line="41" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/Task1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="59" column="47" selection-start-line="59" selection-start-column="47" selection-end-line="59" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClasspathHacker.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/TemplateScript.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/net/URLClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2652">
+          <caret line="197" selection-start-line="197" selection-end-line="197" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/java/lang/ClassLoader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="113" selection-start-line="113" selection-end-line="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/java-1.8.0-openjdk-amd64/jre/lib/rt.jar!/sun/misc/Launcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="250" selection-start-line="250" selection-end-line="250" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.openhft/compiler/2.0/1121c7e2c95ac60908a4e269fa3e172903f61d0b/compiler-2.0-sources.jar!/net/openhft/compiler/JavaSourceFromString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="25" column="6" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.openhft/compiler/2.0/1121c7e2c95ac60908a4e269fa3e172903f61d0b/compiler-2.0-sources.jar!/net/openhft/compiler/CachedCompiler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="61" column="87" selection-start-line="61" selection-start-column="87" selection-end-line="61" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/net.openhft/compiler/2.0/1121c7e2c95ac60908a4e269fa3e172903f61d0b/compiler-2.0-sources.jar!/net/openhft/compiler/CompilerUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="114" column="34" selection-start-line="114" selection-start-column="23" selection-end-line="114" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/skd/test/experiements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="161" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.tinylog/tinylog-api/2.0.0/4ac98890e34acdd7cfaa9903723f2c0ef40343ed/tinylog-api-2.0.0-sources.jar!/org/tinylog/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="221" column="23" selection-start-line="221" selection-start-column="23" selection-end-line="221" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/tinylog.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/dynamicclassloader/ClassFromFile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/skd/chalba/LoadDirector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="808">
+          <caret line="337" column="4" selection-start-line="337" selection-start-column="4" selection-end-line="337" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Task1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
