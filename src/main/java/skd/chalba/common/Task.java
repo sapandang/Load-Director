@@ -26,9 +26,6 @@ public  class Task extends Thread {
 
     //public  int _ThreadNumber,_ThreadCount,_ThreadIteration;
     public  CyclicBarrier gate;
-    public String _CurTimeStamp = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
-    public String _CurDate = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
-
 
     public OkHttpClient client;
     public Requests requests;
@@ -53,6 +50,13 @@ public  class Task extends Thread {
         this.client=client;
     }*/
 
+    public static String _getCurrentTimestamp(){
+       return new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
+    }
+
+    public static String _getCurrentTimestamp(String format){
+        return new SimpleDateFormat(format).format(new Date());
+    }
 
     public void _testCompleted()
     {

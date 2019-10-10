@@ -31,6 +31,7 @@ public class TemplateScript extends Task {
         //executable method
         //it is good practice to write your code in other method
         mainLoop();
+        _testCompleted(); //finish when test complete
     }
 
 
@@ -40,6 +41,22 @@ public class TemplateScript extends Task {
         //Write your code in the try-catch block
         //to avoid any unexpected closure of the script
         try {
+
+
+            //add headers
+            Headers headers = new Headers();
+            headers.put("Content-Type", "application/json" );
+
+            //add query parameters
+            QueryParameters queryParameters = new QueryParameters();
+            queryParameters.add("api_key","wzYz38mncxW4Q7AW3dr86X6qqsDzoBK8");
+
+            //multiPart body
+            MultiPartFormBody authData = new MultiPartFormBody();
+            authData.add("j_username", "admin")
+                    .add("j_password", "312c2dd0b8bc61d02e5539c650f5911488a844e2f8cecc0b237cd38c8400bff3")
+                    .add("remember-me", "false")
+                    .add("submit", "Login");
 
 
             //create GET request

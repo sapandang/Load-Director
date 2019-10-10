@@ -1,3 +1,17 @@
 #My program doesn't stop immediately after onResponse
 https://github.com/square/okhttp/issues/1739
 client.getDispatcher().getExecutorService().shutdown();
+
+
+### copy conf file to the directory
+https://stackoverflow.com/questions/5743036/deploy-additional-files-in-gradle-application-plugin
+
+### copy jars to source dir
+https://discuss.gradle.org/t/how-to-choose-only-some-dependencies-to-copy-to-a-folder/19629/2
+#### Gradle task to copy
+```
+task copyToLib(type: Copy) {
+    from configurations.localDeps
+    into "src/main/java/chalba/extlib"
+}
+```
