@@ -1,5 +1,6 @@
 package skd.test;
 
+import org.json.JSONObject;
 import org.junit.AfterClass;
 import org.junit.Test;
 import skd.chalba.interfaces.AsyncResponseCallback;
@@ -143,6 +144,57 @@ public class TestRequests {
     }
 
 
+    @Test
+    public void testCookiee() throws Exception
+    {
+        requests = new Requests();
+        //send request
+        Headers headers = new Headers();
+        headers.put("Content-Type", "application/json" );
+
+
+        MultiPartFormBody authData = new MultiPartFormBody();
+        authData.add("j_username", "dhlmy79_admin")
+                .add("j_password", "312c2dd0b8bc61d02e5539c650f5911488a844e2f8cecc0b237cd38c8400bff3")
+                .add("remember-me", "false")
+                .add("submit", "Login");
+
+        ResponseData auth = requests.postFormData("https://qa.fareye.co/app/authentication",authData);
+        System.out.println("auth "+auth.code);
+
+        String token = requests.getCookieeValue("https://qa.fareye.co/","XSRF-TOKEN");
+        System.out.println("token: auth ==> "+token);
+
+      //  System.out.println(requests.getCookieHelper().getCookieeJson());
+        System.out.println(" authHeaderMap: "+auth.multiMapHeader.get("set-cookie"));
+
+
+        //account
+        ResponseData account =  requests.get("https://qa.fareye.co/app/rest/account");
+        System.out.println("account "+account.code+"  -  " +account.body);
+
+        //extract the cookiee
+
+         token = requests.getCookieeValue("https://qa.fareye.co/","XSRF-TOKEN");
+        System.out.println("token: account ==> "+token);
+        headers.put("X-XSRF-TOKEN",token);
+
+
+      //  System.out.println(requests.getCookieHelper().getCookieeJson());
+        System.out.println(" accountHeaderMap:  "+account.multiMapHeader.get("set-cookie"));
+
+        ResponseData assignData = requests.postRaw("https://qa.fareye.co/app/rest/order/assign_job","{}",headers);
+        System.out.println(""+assignData.body);
+
+        JSONObject jsonObject = new JSONObject(assignData.body);
+        if (jsonObject.getInt("successCount") == 1 ) {
+            System.out.println("response " + assignData.code +" status:PASS");
+        }else {
+            System.out.println("response " + assignData.code +" status:FAIL "+assignData.body);
+
+        }
+
+    }
 
 
 }

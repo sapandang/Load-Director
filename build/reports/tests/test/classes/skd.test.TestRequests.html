@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class skd.test.TestRequests</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class skd.test.TestRequests</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/skd.test.html">skd.test</a> &gt; TestRequests</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">4.494s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard output</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="testCookiee"></a>
+<h3 class="failures">testCookiee</h3>
+<span class="code">
+<pre>org.json.JSONException: JSONObject[&quot;successCount&quot;] not found.
+	at org.json.JSONObject.get(JSONObject.java:566)
+	at org.json.JSONObject.getInt(JSONObject.java:740)
+	at skd.test.TestRequests.testCookiee(TestRequests.java:190)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:106)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
+	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:117)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:155)
+	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:137)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:404)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:63)
+	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:46)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:55)
+	at java.lang.Thread.run(Thread.java:748)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">testCookiee</td>
+<td class="failures">4.494s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>auth 200
+token: auth ==&gt; 757bc0eb-5506-46ca-b77b-03730bae427f
+ authHeaderMap: [XSRF-TOKEN=757bc0eb-5506-46ca-b77b-03730bae427f; Path=/; Secure, FAREYE_EMP_CODE=dhlmy79_dhlmy79; Path=/; Secure; HttpOnly, FAREYE_CMP_ID=1253; Path=/; Secure; HttpOnly, JSESSIONID=8ffab310-e483-4bbc-877e-74b7d9a8f985; Path=/; Secure; HttpOnly]
+account 200  -  {&quot;login&quot;:&quot;dhlmy79_admin&quot;,&quot;firstName&quot;:&quot;dhlmy79&quot;,&quot;lastName&quot;:&quot;dhlmy79&quot;,&quot;email&quot;:&quot;nitin.kumar@getfareye.com&quot;,&quot;activated&quot;:false,&quot;autoPushMailActivated&quot;:false,&quot;mobileNumber&quot;:&quot;7068721954&quot;,&quot;employeeCode&quot;:&quot;dhlmy79_dhlmy79&quot;,&quot;cityId&quot;:3757,&quot;hubId&quot;:36580,&quot;hubs&quot;:[],&quot;roles&quot;:[&quot;ROLE_JOBS_MASTER&quot;,&quot;ROLE_CITY_HUBS&quot;,&quot;ROLE_USER&quot;,&quot;ROLE_APP_MODULES&quot;,&quot;ROLE_TRANSACTION&quot;,&quot;ROLE_ADMIN&quot;,&quot;ROLE_API&quot;,&quot;ROLE_ORDERS&quot;,&quot;ROLE_DS_MASTER&quot;,&quot;ROLE_DATA_STORE_READ_WRITE&quot;,&quot;ROLE_PROCESS_MASTER&quot;,&quot;ROLE_PROCESS&quot;,&quot;ROLE_TASK_ADMIN&quot;,&quot;ROLE_CUSTOM_PDF&quot;,&quot;ROLE_ORDER_V2&quot;,&quot;ROLE_TRACKING&quot;,&quot;ROLE_SEQUENCE_MASTER&quot;,&quot;ROLE_MERCHANT_MASTER&quot;,&quot;ROLE_DASHBOARD&quot;,&quot;ROLE_ROUTING_USER_MAPPING&quot;,&quot;ROLE_PROCESS_TAKE_ACTION&quot;,&quot;ROLE_ADD_USER&quot;,&quot;ROLE_HOLIDAY_MASTER&quot;,&quot;ROLE_ASSET_MANAGEMENT&quot;,&quot;ROLE_RUNSHEET_ACTION&quot;],&quot;company&quot;:{&quot;id&quot;:1253,&quot;name&quot;:&quot;dhlmy79&quot;,&quot;code&quot;:&quot;dhlmy79&quot;,&quot;timeZone&quot;:&quot;Asia/Kolkata&quot;,&quot;expiryDuration&quot;:24},&quot;userTypeId&quot;:1,&quot;isLoggedIn&quot;:false,&quot;userId&quot;:96623,&quot;userTypeName&quot;:&quot;Admin&quot;}
+token: account ==&gt; 1700b8fa-2002-40c2-bbd8-ed91b25d918d
+ accountHeaderMap:  [XSRF-TOKEN=1700b8fa-2002-40c2-bbd8-ed91b25d918d; Path=/; Secure]
+{&quot;status&quot;:400,&quot;error&quot;:&quot;Bad Request&quot;,&quot;message&quot;:&quot;Could not read JSON: Can not deserialize instance of java.util.ArrayList out of START_OBJECT token\n at [Source: java.io.PushbackInputStream@4bc45edb; line: 1, column: 1]; nested exception is com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.util.ArrayList out of START_OBJECT token\n at [Source: java.io.PushbackInputStream@4bc45edb; line: 1, column: 1]&quot;,&quot;timeStamp&quot;:1570700144857}
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 4.10.3</a> at 10 Oct, 2019 3:05:45 PM</p>
+</div>
+</div>
+</body>
+</html>

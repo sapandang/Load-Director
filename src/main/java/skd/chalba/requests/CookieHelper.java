@@ -54,10 +54,43 @@ public class CookieHelper {
             // Since 'unmodifiableCookieList' can not be changed, create a new
             // one
 
-            //accept cookie once from the site
             if (!mServerCookieStore.containsKey(url.host())) {
-                mServerCookieStore.put(url.host(), new ArrayList<Cookie>(unmodifiableCookieList));
+               mServerCookieStore.put(url.host(), new ArrayList<Cookie>(unmodifiableCookieList));
+           }else {
+
+                //cookiee exists need to patch it
+                HashMap<String,Cookie> cookiemap = new HashMap<>();
+
+                //add old cookiee to map
+                List<Cookie> old_cookiee =  mServerCookieStore.get(url.host());
+
+                for(int i=0;i<unmodifiableCookieList.size();i++)
+                {
+                  for(int j=0;j<old_cookiee.size();j++)
+                  {
+                        if(unmodifiableCookieList.get(i).name().equals(old_cookiee.get(j).name()))
+                        {
+                            //remove from the old one
+                            old_cookiee.remove(j);
+                            old_cookiee.add(unmodifiableCookieList.get(i));
+                        }
+                  }
+
+                }
+
+                mServerCookieStore.put(url.host(),old_cookiee);
+
+
+                //=====================
+
+
             }
+
+            //cookiee need to be updated every time
+            //accept cookie once from the site
+//            if (!mServerCookieStore.containsKey(url.host())) {
+//                mServerCookieStore.put(url.host(), new ArrayList<Cookie>(unmodifiableCookieList));
+//            }
             // The persistence code should be described here if u want.
         }
 

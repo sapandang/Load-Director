@@ -5,6 +5,8 @@ import org.tinylog.Logger;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author sapan.kumar
@@ -26,6 +28,9 @@ public class ResponseData {
     public long byteReceived=0;
     public String message="";
     private String threadName="";
+    public Headers headers;
+
+    public Map<String, List<String>> multiMapHeader;
 
 
     protected void setThreadName(String name){
@@ -34,7 +39,18 @@ public class ResponseData {
         //With the executed thread -> So thread count -1
 
         name=name.replaceAll("Thread-","");
-        int threadCount = Integer.parseInt(name);
+        int threadCount =2;
+
+        //Leads to exception in unit test
+        try {
+            threadCount = Integer.parseInt(name);
+        }catch (Exception e)
+        {
+            threadCount =2;
+            Logger.error(e);
+        }
+
+
 
         threadCount/=2; //Comment for the match the thread
         this.threadName="Thread-"+threadCount;
@@ -160,7 +176,8 @@ public class ResponseData {
             this.sendTimeStamp = new SimpleDateFormat(timeFormat).format(new Date(this.sentRequestAtMillis));
             this.responseTimeAtMillis = this.receivedResponseAtMillis - this.sentRequestAtMillis;
             this.message=response.message();
-
+            //TODO need to implement headers
+            multiMapHeader = response.headers().toMultimap();
 
         } catch (Exception e) {
             Logger.error(e);

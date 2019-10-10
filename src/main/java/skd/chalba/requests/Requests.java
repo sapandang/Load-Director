@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -35,9 +36,9 @@ public class Requests {
         client = new OkHttpClient().newBuilder()
 //                .readTimeout(60, TimeUnit.SECONDS)
 //                .connectTimeout(60, TimeUnit.SECONDS)
-                .cookieJar(cookieHelper.cookieJar())
                 .followRedirects(false)
                 .followSslRedirects(false)
+                .cookieJar(cookieHelper.cookieJar())
                 .build();
         client.dispatcher().setMaxRequests(Integer.MAX_VALUE);
         client.dispatcher().setMaxRequestsPerHost(Integer.MAX_VALUE);
@@ -104,7 +105,28 @@ public class Requests {
         this.client = client;
     }
 
+    public String getCookieeValue(String url,String key){
+       return parseCookieValue(client.cookieJar().loadForRequest(HttpUrl.get(url)), key);
+    }
 
+    /**
+     * extract the cookiees from the list
+     * @param cookies
+     * @param key
+     * @return
+     */
+    private static String parseCookieValue(List<Cookie> cookies, String key)
+    {
+
+        for(Cookie c : cookies)
+        {
+            if(c.name().equals(key))
+            {
+                return c.value();
+            }
+        }
+        return  null;
+    }
 
 
 
