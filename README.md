@@ -6,7 +6,7 @@ Chalba is open source hackable load testing tool inspired from jmeter, gatling, 
 * java jdk 1.8.* must be installed.
 * JAVA_HOME is set and it must point to jdk
 ##### Download the chalba binary
-* link: 
+* link: https://github.com/sapandang/chalba/releases/tag/v1.0-alpha
 
 ##### Extract the zip or tar
 After extracting the following directory will be created.
