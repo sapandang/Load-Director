@@ -274,7 +274,17 @@ public class Requests {
 
         ResponseData responseData = null;
         try {
-            responseData = sendRequest(request);
+
+            //check if request is or async
+            AsyncResponseCallback asyncResponseCallback = isAsyncRequest(objects);
+            if(asyncResponseCallback==null) {
+                //send sync Response
+                responseData = sendRequest(request);
+            }else {
+                //request is async
+                sendAsyncRequest(request,asyncResponseCallback);
+            }
+
         } catch (Exception e) {
             Logger.error(e);
         }

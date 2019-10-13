@@ -14,7 +14,7 @@ import skd.chalba.interfaces.*;
  * @author sapan.dang
  */
 
-@ThreadCount(1)
+@ThreadCount(10)
 @ThreadSpawnDelay(100)
 public class Task1 extends Task {
 
@@ -33,8 +33,8 @@ public class Task1 extends Task {
         super.run();
         System.out.println("Started thread...");
 
-        while (true) {
-            //ResponseData res = requests.get("https://qa.fareye.co");
+
+//            ResponseData res = requests.get("https://www.buglens.com");
 //            if (res != null) {
 //                System.out.println("ResponseCode " + res.code);
 //            }
@@ -44,7 +44,7 @@ public class Task1 extends Task {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            requests.get("https://qa.fareye.co", new AsyncResponseCallback() {
+            requests.get("https://www.google.com", new AsyncResponseCallback() {
 
                 @Override
                 public void onResponse(ResponseData arg0) {
@@ -54,7 +54,6 @@ public class Task1 extends Task {
             });
 
 
-        }
     }
 
 

@@ -179,7 +179,7 @@ public class CookieHelper {
 //========================= SET AND DELETE COOKIEE =======================================================
 //========================================================================================================
 /* cookiee format
-    [{"cookiee":["{\"path\":\"/\",\"domain\":\"qa.fareye.co\",\"hostOnly\":true,\"name\":\"XSRF-TOKEN\",\"httpOnly\":false,\"secure\":true,\"persistent\":false,\"value\":\"785296bd-2c35-414d-a3ab-7c6375714f47\",\"expiresAt\":253402300799999}","{\"path\":\"/\",\"domain\":\"qa.fareye.co\",\"hostOnly\":true,\"name\":\"JSESSIONID\",\"httpOnly\":true,\"secure\":true,\"persistent\":false,\"value\":\"d4ed0049-f0f6-4475-b359-3725e78c891d\",\"expiresAt\":253402300799999}"],"name":"qa.fareye.co"}]
+    [{"cookiee":["{\"path\":\"/\",\"domain\":\"www.buglens.com\",\"hostOnly\":true,\"name\":\"XSRF-TOKEN\",\"httpOnly\":false,\"secure\":true,\"persistent\":false,\"value\":\"785296bd-2c35-414d-a3ab-7c6375714f47\",\"expiresAt\":253402300799999}","{\"path\":\"/\",\"domain\":\"www.buglens.com\",\"hostOnly\":true,\"name\":\"JSESSIONID\",\"httpOnly\":true,\"secure\":true,\"persistent\":false,\"value\":\"d4ed0049-f0f6-4475-b359-3725e78c891d\",\"expiresAt\":253402300799999}"],"name":"www.buglens.com"}]
 */
 //========================================================================================================
 

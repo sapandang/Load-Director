@@ -52,7 +52,7 @@ public class ResponseData {
 
 
 
-        threadCount/=2; //Comment for the match the thread
+        threadCount-=2; //Comment for the match the thread
         this.threadName="Thread-"+threadCount;
 
 
