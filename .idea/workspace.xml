@@ -8,27 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20c206e6-3159-4fab-b142-f5ab4ead7238" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Task1.java" beforeDir="false" afterPath="$PROJECT_DIR$/Task1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.ctl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/response.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/common/OkHttp3CookieHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/common/OkHttp3CookieHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/CookieHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/CookieHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/Requests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/ResponseData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/skd/chalba/requests/ResponseData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/skd/test/TestRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/skd/test/TestRequests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -102,10 +82,9 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="338">
-                <caret line="221" selection-start-line="221" selection-end-line="221" />
+              <first_editor relative-caret-position="306">
+                <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
                 <folding>
-                  <element signature="imports" expanded="true" />
                   <element signature="e#1385#1386#0" expanded="true" />
                   <element signature="e#1458#1459#0" expanded="true" />
                 </folding>
@@ -229,17 +208,6 @@
             <path>
               <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
               <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="skd.chalba" type="b2602c69:ProjectViewProjectNode" />
-              <item name="chalba" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -514,7 +482,7 @@
       <window_info anchor="bottom" id="SBT Execute" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="SBT Console" order="9" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="10" sideWeight="0.4996016" visible="true" weight="0.33695653" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.4996016" weight="0.33695653" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5003984" side_tool="true" weight="0.4876161" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.32847896" />
       <window_info anchor="bottom" id="Inspection Results" order="13" weight="0.32817337" />
@@ -1090,10 +1058,9 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="338">
-            <caret line="221" selection-start-line="221" selection-end-line="221" />
+          <first_editor relative-caret-position="306">
+            <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
             <folding>
-              <element signature="imports" expanded="true" />
               <element signature="e#1385#1386#0" expanded="true" />
               <element signature="e#1458#1459#0" expanded="true" />
             </folding>

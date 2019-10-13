@@ -16,7 +16,7 @@ chalba/
 │   ├── chalba --executable for linux
 │   └── chalba.bat --executable for windows
 ├── lib/
-	├── chalba.jar -- used in IDE
+    ├── chalba.jar -- used in IDE
     └── contains the libraries
 ```
 ##### Set environment to path
