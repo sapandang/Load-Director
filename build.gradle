@@ -4,7 +4,10 @@ plugins {
 }
 
 group 'skd'
-version '1.0-SNAPSHOT'
+version ''  //empty since we want jar name to be chalba.jar
+
+//====> version  1.0-alpha<=================
+
 
 sourceCompatibility = 1.8
 
@@ -12,9 +15,15 @@ repositories {
     mavenCentral()
 }
 
+jar {
+    baseName = 'chalba'
+}
+
+
 application {
     mainClassName = 'skd.chalba.LoadDirector'
     applicationName = 'chalba'
+
 }
 
 /*jar {
