@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+    <div id="app">
+        <v-app>
+            <v-content>
+                <v-app-bar app color="indigo" dark
+                :extended="extended"
+                >
+                    <v-spacer></v-spacer>
+                    <v-toolbar-title>Chalba Reports</v-toolbar-title>
+                    <v-spacer></v-spacer>
+                    <v-btn icon @click="handleFullScreen()">
+                        <v-icon>mdi-fullscreen</v-icon>
+                    </v-btn>
+
+                    <template v-slot:extension>
+                        <v-tabs v-model="model" centered slider-color="yellow" background-color="transparent" grow
+                            show-arrows>
+
+                            <!-- Tabs -->
+                            <v-tab href="tab1"> Summary Report </v-tab>
+                            <v-tab href="tab1"> Response Time </v-tab>
+
+
+                            <!-- Tabs Items -->
+                            <v-tab-item value="tab1">
+                                
+                                <v-container class="grey lighten-5">
+                                    <v-row >
+
+                                        <v-col>
+                                       <v-card flat tile>
+                                                <v-card-text>
+                                                    <apexchart width="500" type="bar" :options="options"
+                                                        :series="series">
+                                                    </apexchart>
+                                                </v-card-text>
+                                            </v-card>                                            
+                                        </v-col>
+                                        <v-col>
+                                                <v-card flat tile>
+                                                         <v-card-text>
+                                                             <apexchart width="500" type="bar" :options="options"
+                                                                 :series="series">
+                                                             </apexchart>
+                                                         </v-card-text>
+                                                     </v-card>
+                                                     
+                                                 </v-col>
+                                                 <v-col>
+                                                        <v-card flat tile>
+                                                                 <v-card-text>
+                                                                     <apexchart width="500" type="bar" :options="options"
+                                                                         :series="series">
+                                                                     </apexchart>
+                                                                 </v-card-text>
+                                                             </v-card>
+                                                             
+                                                         </v-col>
+                                                         <v-col>
+                                                                <v-card flat tile>
+                                                                         <v-card-text>
+                                                                             <apexchart width="500" type="bar" :options="options"
+                                                                                 :series="series">
+                                                                             </apexchart>
+                                                                         </v-card-text>
+                                                                     </v-card>
+                                                                     
+                                                                 </v-col>
+
+                                    </v-row>
+                                </v-container>
+                            </v-tab-item>
+                           
+
+                        </v-tabs>
+                    </template>
+                </v-app-bar>
+
+                
+
+            </v-content>
+        </v-app>
+    </div>
+
+
+    <script>
+        new Vue({
+            el: '#app',
+            vuetify: new Vuetify(),
+            components: {
+                apexchart: VueApexCharts,
+            },
+            data: {
+                options: {
+                    chart: {
+                        id: 'vuechart-example'
+                    },
+                    xaxis: {
+                        categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998]
+                    }
+                },
+                series: [{
+                    name: 'series-1',
+                    data: [30, 40, 45, 50, 49, 60, 70, 91]
+                }]
+            }
+        })
+
+
+    </script>
+</body>
+
+</html>
