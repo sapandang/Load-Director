@@ -11,5 +11,6 @@ import java.lang.annotation.RetentionPolicy;
 public @interface ThreadCount {
 
     int value() default 1;
-
+    String fromCsvWithHeaders() default "";
+    String fromCsvWithoutHeaders() default "";
 }

@@ -11,7 +11,7 @@ import skd.chalba.runner.ThreadSpawnDelay;
  * @author sapan.dang
  */
 
-@ThreadCount(1)
+@ThreadCount(fromCsvWithoutHeaders = "input/dummycsvdata.csv")
 @ThreadSpawnDelay(100)
 public class Task1 extends Task {
 

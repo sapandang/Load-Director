@@ -20,6 +20,9 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Enumeration;
 import java.util.HashMap;
 import java.util.Properties;
@@ -343,12 +346,41 @@ public static void loadjars()
 
     }
 
-    public static void registerTask(Class taskClass)
-    {
+    public static void registerTask(Class taskClass) {
 
         Logger.info("registering task "+taskClass.getName());
         String taskClassName = taskClass.getName();
+        //Get the thread count
         ThreadCount threadCount = (ThreadCount) taskClass.getAnnotation(ThreadCount.class);
+        int _threadCount =threadCount.value();
+        if(!threadCount.fromCsvWithHeaders().equals(""))
+        {
+            Logger.info("Setting up thread count from the csv file with headers:  "+threadCount.fromCsvWithHeaders());
+            Path path = Paths.get(threadCount.fromCsvWithHeaders());
+            try {
+                _threadCount = Math.toIntExact(Files.lines(path).count());
+                _threadCount-=1; //remove the header
+            } catch (IOException e) {
+                Logger.error("file not fount "+threadCount.fromCsvWithHeaders());
+                e.printStackTrace();
+                System.exit(0);
+            }
+        }
+        if(!threadCount.fromCsvWithoutHeaders().equals(""))
+        {
+            Logger.info("Setting up thread count from the csv file without headers:  "+threadCount.fromCsvWithoutHeaders());
+            Path path = Paths.get(threadCount.fromCsvWithoutHeaders());
+            try {
+                _threadCount = Math.toIntExact(Files.lines(path).count());
+            } catch (IOException e) {
+                Logger.error("File not found "+threadCount.fromCsvWithoutHeaders());
+                e.printStackTrace();
+                System.exit(0);
+            }
+        }
+
+
+
        // TaskName taskName = (TaskName) taskClass.getAnnotation(TaskName.class);
         ThreadSpawnDelay threadSpawnDelay = (ThreadSpawnDelay) taskClass.getAnnotation(ThreadSpawnDelay.class);
 
@@ -356,7 +388,7 @@ public static void loadjars()
        // Logger.info("taskName "+taskName.value());
         Logger.info("threadSpawnDelay "+threadSpawnDelay.value());
 
-        TaskRunner taskRunner = new TaskRunner(taskClass,threadCount.value(),taskClassName,threadSpawnDelay.value());
+        TaskRunner taskRunner = new TaskRunner(taskClass,_threadCount,taskClassName,threadSpawnDelay.value());
         taskRunnerHashMap.put(taskClassName,taskRunner);
 
     }
@@ -370,13 +402,16 @@ public static void loadjars()
             TaskRunner taskRunner = taskRunnerHashMap.get(taskName);
             if(taskRunner!=null) {
                 taskRunner.startTasks();
+                Logger.info("starting task "+taskName);
                 return "taskStarted";
             }else {
+                Logger.info("task not found "+taskName);
                 return "task not found";
             }
 
         }catch (Exception e)
         {
+            Logger.error(e);
             e.printStackTrace();
             return "taskStartError "+e.getMessage();
         }
