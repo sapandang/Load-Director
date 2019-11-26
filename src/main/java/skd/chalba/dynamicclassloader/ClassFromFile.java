@@ -4,6 +4,7 @@ import net.openhft.compiler.CompilerUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
 import org.tinylog.Logger;
+import skd.chalba.LoadDirector;
 
 import java.io.File;
 import java.io.IOException;
@@ -38,6 +39,20 @@ public class ClassFromFile {
             }
         }
 
+        //add jar from executable dir extlib path
+        File extlibDir = new File(LoadDirector.extlibDir);
+        Logger.info("Scanning Path for library "+extlibDir.getAbsolutePath());
+        if(extlibDir.exists()) {
+            String[] extensions = new String[]{"jar"};
+            Logger.info("Loading all the jars from " + extlibDir.getCanonicalPath() + " including those in subdirectories");
+            List<File> files = (List<File>) FileUtils.listFiles(extlibDir, extensions, true);
+            for (File filex : files) {
+                Logger.info("Loading " + filex.getCanonicalPath());
+                boolean stat = CompilerUtils.addClassPath(filex.getCanonicalPath());
+
+            }
+        }
+
 
        Class taskClass = CompilerUtils.loadFromJava(className, javaCode);
        return taskClass;
@@ -49,6 +64,7 @@ public class ClassFromFile {
         method.setAccessible(true);
         method.invoke(ClassLoader.getSystemClassLoader(), new Object[]{file.toURI().toURL()});
     }
+
     public static synchronized void loadLibrary(java.io.File jar)
     {
         try {

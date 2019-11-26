@@ -20,6 +20,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.*;
 import java.net.URL;
 import java.net.URLClassLoader;
+import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -30,6 +31,8 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.stream.Collectors;
 
+import static jdk.nashorn.internal.objects.NativeString.substring;
+
 /**
  * @author sapan.dang
  */
@@ -38,12 +41,26 @@ public class LoadDirector {
     static CommandLine cmd;
 
    static String currentDirectory = System.getProperty("user.dir");
+  public static String extlibDir;
 
    static HashMap<String, TaskRunner> taskRunnerHashMap = new HashMap<>();
 
     public static void main(String[] arg) throws Exception {
         Logger.info("LoadDirector Started...");
         Logger.info("Current working directory "+currentDirectory);
+
+        String path = LoadDirector.class.getProtectionDomain().getCodeSource().getLocation().getPath();
+        String decodedPath = URLDecoder.decode(path, "UTF-8");
+        String libPath =  decodedPath.substring(0, path.lastIndexOf("/") + 1);
+        Logger.info("executable directory "+libPath);
+
+        //generate extlib dir
+        File exlibpath = new File(libPath+"/extlib");
+        if(!exlibpath.exists())
+        {
+            exlibpath.mkdirs();
+        }
+        extlibDir=exlibpath.getAbsolutePath();
 
         //loadjars(); //load the jars
 

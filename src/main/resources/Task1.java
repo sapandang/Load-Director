@@ -5,6 +5,7 @@ import skd.chalba.common.*;
 import skd.chalba.requests.*;
 import skd.chalba.runner.*;
 import skd.chalba.interfaces.*;
+import skd.chalba.elements.*;
 
 /**
  * This is the template File for writing the load script
@@ -31,6 +32,8 @@ public class Task1 extends Task {
         //executable method
         //it is good practice to write your code in other method
         mainLoop();
+        //call test completed when your test is finished
+        _testCompleted();
     }
 
 

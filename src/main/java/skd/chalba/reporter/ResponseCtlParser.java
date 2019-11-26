@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -95,6 +96,9 @@ public class ResponseCtlParser {
             metric.responseCodemaps.put(ctlRecord.ResponseCode,count+1);
         }
 
+        //calculate percentile
+
+
 
     }
 
@@ -102,10 +106,19 @@ public class ResponseCtlParser {
 
     class Metric {
 
+        ArrayList<Long> responseTimeArrayList = new ArrayList<Long>();
+
         long totalResponseTime=0;
         long maxReponseTime, minResponseTime, averageReponseTime=0;
         long totalSamples = 0, totalErrorSamples = 0, percentile90, percentile95, percentile99;
         HashMap<Integer, Integer> responseCodemaps = new HashMap<>();
+
+        public void addResponseList(long responseTime)
+        {
+            responseTimeArrayList.add(responseTime);
+
+        }
+
 
         @Override
         public String toString() {
@@ -124,7 +137,7 @@ public class ResponseCtlParser {
     public static void main(String[] args) {
         System.out.println("Testing ReportGenerator");
         ResponseCtlParser responseCtlParser = new ResponseCtlParser();
-        responseCtlParser.readResponseFile("input/response.ctl");
+        responseCtlParser.readResponseFile("/home/sapan/Documents/workspace/javaProject/chalba/input/records.csv");
         System.out.println(responseCtlParser.summarymap);
 
     }

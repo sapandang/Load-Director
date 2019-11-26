@@ -10,8 +10,9 @@ public class CtlRecord {
 
   public   String ThreadName,StatusMessage,RequestURL;
   public   int ResponseCode;
-  public   long RequestSentAtMillis,ResponseReceivedAtMillis,ResponseReceivedTime,
-          ResponseSendTime,ResponseTimeAtMillis;
+  public   long RequestSentAtMillis,ResponseReceivedAtMillis,
+          ResponseTimeAtMillis;
+    //ResponseReceivedTime,ResponseSendTime
 
 
     public CtlRecord(CSVRecord csvRecord){
@@ -24,8 +25,8 @@ public class CtlRecord {
 
         RequestSentAtMillis = Long.parseLong(csvRecord.get("RequestSentAtMillis"));
         ResponseReceivedAtMillis = Long.parseLong(csvRecord.get("ResponseReceivedAtMillis"));
-        ResponseReceivedTime = Long.parseLong(csvRecord.get("ResponseReceivedTime"));
-        ResponseSendTime = Long.parseLong(csvRecord.get("ResponseSendTime"));
+        //ResponseReceivedTime = Long.parseLong(csvRecord.get("ResponseReceivedTime"));
+        //ResponseSendTime = Long.parseLong(csvRecord.get("ResponseSendTime"));
         ResponseTimeAtMillis = Long.parseLong(csvRecord.get("ResponseTimeAtMillis"));
 
     }
