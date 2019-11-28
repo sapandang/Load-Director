@@ -40,7 +40,7 @@ public class LoadDirector {
 
     static CommandLine cmd;
 
-   static String currentDirectory = System.getProperty("user.dir");
+  public static String currentDirectory = System.getProperty("user.dir");
   public static String extlibDir;
 
    static HashMap<String, TaskRunner> taskRunnerHashMap = new HashMap<>();
@@ -82,7 +82,7 @@ public class LoadDirector {
         commandParser(arg);
         loadFileAndRun();
         //StartServer(); //TODO : need to change to work as library
-        Logger.info("server started.... Not For Release yet");
+        Logger.info("server started.... SERVER MODE is still in alpha stage");
 
     }
 

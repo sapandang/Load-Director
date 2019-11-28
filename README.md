@@ -6,7 +6,7 @@ Chalba is open source hackable load testing tool inspired from jmeter, gatling, 
 * java jdk 1.8.* must be installed.
 * JAVA_HOME is set and it must point to jdk
 ##### Download the chalba binary
-* link: https://github.com/sapandang/chalba/releases/tag/v1.0-alpha
+* link: https://github.com/sapandang/chalba/releases/
 
 ##### Extract the zip or tar
 After extracting the following directory will be created.
@@ -17,6 +17,7 @@ chalba/
 │   └── chalba.bat --executable for windows
 ├── lib/
     ├── chalba.jar -- used in IDE
+    ├── extlib -- put your jars here
     └── contains the libraries
 ```
 ##### Set environment to path
@@ -122,7 +123,8 @@ you can user your favourite to write the scripts just add ***skd.chalba-1.0-SNAP
 * In ***build.gradle*** add chalba jar as dependency
 ```java 
 //load test dependency  
-compile files('full_path_to_jar/skd.chalba-1.0-SNAPSHOT.jar')
+compile fileTree(dir: "full path to chalba directory/chalba/lib/", includes: ['*.jar'])
+
 ```
 * To run your script navigate to ***src->main->java->chalba*** directory 
 * In this directory open terminal/command prompt and run the script.
