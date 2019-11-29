@@ -28,8 +28,8 @@ public class experiements {
         System.out.println("adding custom jars");
         System.out.println("===============================");
 
-        loadLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
-        addSoftwareLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+        loadLibrary(new File("/home/sapan/Documents//GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+        addSoftwareLibrary(new File("/home/sapan/Documents//GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
 
 
         printClassPath();

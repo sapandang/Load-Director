@@ -177,11 +177,11 @@ public static void loadjars()
 
     try {
 
-       // ClassFromFile.addSoftwareLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
-        ClassFromFile.loadLibrary(new File("/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+       // ClassFromFile.addSoftwareLibrary(new File("/home/sapan/Documents//GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
+        ClassFromFile.loadLibrary(new File("/home/sapan/Documents//GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar"));
 
         System.out.println("Loading jars");
-        String pathToJar = "/home/sapan/Documents/fareye/GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar";
+        String pathToJar = "/home/sapan/Documents//GitLoadProject/templateLoad/loadtestscripts/loadgenerator/java_gen/load1/libs/sqlite-jdbc-3.27.2.1.jar";
         JarFile jarFile = new JarFile(pathToJar);
         Enumeration<JarEntry> e = jarFile.entries();
 
