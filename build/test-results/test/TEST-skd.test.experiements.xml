@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="skd.test.experiements" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-16T05:47:54" hostname="sapan-D" time="0.012">
+<testsuite name="skd.test.experiements" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-12-16T06:09:03" hostname="sapan-D" time="0.274">
   <properties/>
-  <testcase name="packageName" classname="skd.test.experiements" time="0.012"/>
+  <testcase name="packageName" classname="skd.test.experiements" time="0.274"/>
   <system-out><![CDATA[Started
-package chalba
+package chalba.xd
+chalba.xd
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

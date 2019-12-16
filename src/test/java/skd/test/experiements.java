@@ -103,9 +103,6 @@ public class experiements {
         String data = javaCode.substring(javaCode.indexOf("package"),javaCode.indexOf(";"));
         System.out.println(data);
 
-
-
-
     }
 
     @Test
