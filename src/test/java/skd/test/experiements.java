@@ -1,16 +1,26 @@
 package skd.test;
 
+import com.github.javaparser.JavaParser;
+import com.github.javaparser.StaticJavaParser;
+import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.PackageDeclaration;
+import com.github.javaparser.ast.body.ClassOrInterfaceDeclaration;
+import org.apache.commons.io.FileUtils;
 import org.junit.Test;
 
 import java.io.File;
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.Enumeration;
+import java.util.Optional;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author sapan.dang
@@ -86,6 +96,17 @@ public class experiements {
         }
     }
 
+    @Test
+    public void packageName() throws IOException {
+        System.out.println("Started");
+        String javaCode = FileUtils.readFileToString(new File("Task1.java"), "utf-8");
+        String data = javaCode.substring(javaCode.indexOf("package"),javaCode.indexOf(";"));
+        System.out.println(data);
+
+
+
+
+    }
 
     @Test
     public void loadJar3() throws Exception

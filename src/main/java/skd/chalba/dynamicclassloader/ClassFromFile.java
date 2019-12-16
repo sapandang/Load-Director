@@ -1,5 +1,8 @@
 package skd.chalba.dynamicclassloader;
 
+import com.github.javaparser.StaticJavaParser;
+import com.github.javaparser.ast.CompilationUnit;
+import com.github.javaparser.ast.PackageDeclaration;
 import net.openhft.compiler.CompilerUtils;
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.filefilter.TrueFileFilter;
@@ -13,6 +16,9 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.net.URLClassLoader;
 import java.util.List;
+import java.util.Optional;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author sapan.dang
@@ -21,9 +27,13 @@ public class ClassFromFile {
 
     public static Class getClassFromFile(File file) throws IOException, ClassNotFoundException, NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
 
-        String className = "chalba."+file.getName().replaceAll(".java","");
+        //String className = "chalba."+file.getName().replaceAll(".java","");
         String javaCode = FileUtils.readFileToString(file, "utf-8");
 
+        CompilationUnit compilationUnit = StaticJavaParser.parse(javaCode);
+        Optional<PackageDeclaration> classA = compilationUnit.getPackageDeclaration();
+        String packageName  = classA.get().getName().toString();
+        String className = packageName+"."+file.getName().replaceAll(".java","");
 
         //add jars to classpath
         File dir = new File("extlib");
