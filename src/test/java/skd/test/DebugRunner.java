@@ -7,7 +7,7 @@ import skd.chalba.LoadDirector;
  */
 public class DebugRunner {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         System.out.println("Debug started..");
         LoadDirector.registerTask(Task1.class);
         String result =   LoadDirector.startTask("skd.test.Task1");

@@ -5,8 +5,8 @@ import skd.chalba.common.TaskParams;
 import skd.chalba.interfaces.AsyncResponseCallback;
 import skd.chalba.requests.QueryParameters;
 import skd.chalba.requests.ResponseData;
-import skd.chalba.runner.ThreadCount;
-import skd.chalba.runner.ThreadSpawnDelay;
+import skd.chalba.interfaces.ThreadCount;
+import skd.chalba.interfaces.ThreadSpawnDelay;
 
 
 /**

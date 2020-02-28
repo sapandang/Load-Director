@@ -5,13 +5,19 @@ import org.apache.commons.cli.CommandLineParser;
 import org.apache.commons.cli.DefaultParser;
 import org.apache.commons.cli.Options;
 import org.apache.commons.io.FileUtils;
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.servlet.ServletHandler;
 import org.json.JSONArray;
-import org.json.JSONObject;
 import org.tinylog.Logger;
 import skd.chalba.dynamicclassloader.ClassFromFile;
+import skd.chalba.elements.PropReader;
+import skd.chalba.interfaces.LoadProp;
+import skd.chalba.interfaces.ThreadCount;
+import skd.chalba.interfaces.ThreadSpawnDelay;
+import skd.chalba.interfaces.TimeoutCallback;
 import skd.chalba.runner.*;
+import skd.chalba.server.ReporterSocket;
+import spark.Request;
+import spark.Response;
+import spark.Route;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,14 +30,15 @@ import java.net.URLDecoder;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.HashMap;
-import java.util.Properties;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.stream.Collectors;
 
 import static jdk.nashorn.internal.objects.NativeString.substring;
+import static spark.Spark.*;
 
 /**
  * @author sapan.dang
@@ -39,6 +46,7 @@ import static jdk.nashorn.internal.objects.NativeString.substring;
 public class LoadDirector {
 
     static CommandLine cmd;
+    public static ArrayList<String> excludeArrayList;
 
   public static String currentDirectory = System.getProperty("user.dir");
   public static String extlibDir;
@@ -83,6 +91,9 @@ public class LoadDirector {
         loadFileAndRun();
         //StartServer(); //TODO : need to change to work as library
         Logger.info("server started.... SERVER MODE is still in alpha stage");
+
+        //TODO:test code comment while production
+       // StartServer();
 
     }
 
@@ -217,7 +228,22 @@ public static void loadjars()
 
     public static void StartServer() throws Exception
     {
-        Server server = new Server(8080);
+        Logger.info("Starting server..");
+        //setUp server
+        port(8080);
+        setupRoutes();
+        setFilters();
+        webSocket("/echo", ReporterSocket.class);
+        init();
+
+        //setUp exclude path
+        excludeArrayList = new ArrayList<>();
+        excludeArrayList.add("/auth/");
+        excludeArrayList.add("/img");
+        excludeArrayList.add("/filters");
+
+        //TODO: remove the commented code when new server fully implemented
+        /*Server server = new Server(8080);
         ServletHandler servletHandler = new ServletHandler();
         server.setHandler(servletHandler);
 
@@ -232,8 +258,49 @@ public static void loadjars()
         servletHandler.addServletWithMapping(JVMStatsServlet.class, "/api/jvmstats");
 
         server.start();
-        server.join();
+        server.join();*/
     }
+
+    public static void setupRoutes(){
+
+        //setup static files
+        staticFiles.externalLocation("assets");
+
+    }
+
+    public static void setFilters()
+    {
+
+        //setup CROS
+        options("/*", new Route() {
+            @Override
+            public Object handle(Request request, Response response) throws Exception {
+                return "OK";
+            }
+        });
+
+        //after filter
+        after((request, response) -> {
+
+            // Website you wish to allow to connect
+            //response.header("Access-Control-Allow-Origin", "http://localhost:8081"); //production
+            response.header("Access-Control-Allow-Origin", "*");
+
+            // Request methods you wish to allow
+            response.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, PATCH, DELETE");
+
+            // Request headers you wish to allow
+            response.header("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+
+            // Set to true if you need the website to include cookies in the requests sent
+            // to the API (e.g. in case you use sessions)
+            response.header("Access-Control-Allow-Credentials", "true");
+
+
+        });
+
+    }
+
 
     public static class HomeServlet extends HttpServlet
     {
@@ -363,13 +430,16 @@ public static void loadjars()
 
     }
 
-    public static void registerTask(Class taskClass) {
+    public static void registerTask(Class taskClass) throws Exception {
 
         Logger.info("registering task "+taskClass.getName());
         String taskClassName = taskClass.getName();
+
         //Get the thread count
         ThreadCount threadCount = (ThreadCount) taskClass.getAnnotation(ThreadCount.class);
         int _threadCount =threadCount.value();
+
+        //csv parameter
         if(!threadCount.fromCsvWithHeaders().equals(""))
         {
             Logger.info("Setting up thread count from the csv file with headers:  "+threadCount.fromCsvWithHeaders());
@@ -383,6 +453,8 @@ public static void loadjars()
                 System.exit(0);
             }
         }
+
+        //csv parameter
         if(!threadCount.fromCsvWithoutHeaders().equals(""))
         {
             Logger.info("Setting up thread count from the csv file without headers:  "+threadCount.fromCsvWithoutHeaders());
@@ -396,10 +468,28 @@ public static void loadjars()
             }
         }
 
-
+        //get run duration
+        TimeoutCallback timeoutCallback = (TimeoutCallback) taskClass.getAnnotation(TimeoutCallback.class);
 
        // TaskName taskName = (TaskName) taskClass.getAnnotation(TaskName.class);
         ThreadSpawnDelay threadSpawnDelay = (ThreadSpawnDelay) taskClass.getAnnotation(ThreadSpawnDelay.class);
+
+        //Read from csv file
+        LoadProp loadProp = (LoadProp) taskClass.getAnnotation(LoadProp.class);
+        //check if prop file value provided or not
+        if(!loadProp.value().equalsIgnoreCase(""))
+        {
+            Logger.info("Load thread count from property file "+loadProp.value());
+            PropReader propReader = new PropReader(loadProp.value());
+            //prop file exist so get the thread count value
+            if(!threadCount.fromProp().equalsIgnoreCase(""))
+            {
+                //key has been provided so look for the value
+                String threadCountKey = propReader.getProperty(threadCount.fromProp());
+                _threadCount = Integer.parseInt(threadCountKey);
+            }
+        }
+
 
         Logger.info("threadCount "+threadCount.value());
        // Logger.info("taskName "+taskName.value());

@@ -11,4 +11,11 @@
 #V1.2
 * Added support for custom package, set package name as you want
 * now Scripts can be run from different directories i.e users create seperate directory for the scripts.
+
+#V1.3
+* moved all the interfaces to interface package
+* added run duration arguments i.e now scripts can be run for a duration.
+* added LoadProp now thread count can be set from prop file
+* updated the help file
+
  

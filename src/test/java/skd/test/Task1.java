@@ -1,11 +1,10 @@
 package skd.test;
 
-import org.tinylog.Logger;
 import skd.chalba.common.Task;
 import skd.chalba.common.TaskParams;
 import skd.chalba.requests.ResponseData;
-import skd.chalba.runner.ThreadCount;
-import skd.chalba.runner.ThreadSpawnDelay;
+import skd.chalba.interfaces.ThreadCount;
+import skd.chalba.interfaces.ThreadSpawnDelay;
 
 /**
  * @author sapan.dang

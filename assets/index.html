@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script src="csvdata.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue-apexcharts"></script>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+</head>
+
+<body>
+  <div id="app">
+    <v-app>
+      <v-content>
+
+        <v-card>
+          <v-toolbar color="primary">
+            <v-toolbar-title class="white--text" style="overflow: visible;"> <I><B>CHALBA REPORT </B></I>
+            </v-toolbar-title>
+            <v-spacer></v-spacer>
+
+
+            <v-btn icon>
+              <v-icon class="white--text">mdi-dots-vertical</v-icon>
+            </v-btn>
+
+            <template v-slot:extension>
+              <v-tabs v-model="model" centered slider-color="yellow" background-color="transparent">
+                <v-tab style="color: white;" href="#resperthread">
+                  Response time per thread
+                </v-tab>
+                <!--                <v-tab style="color: white;" href="#rescodeperthread">-->
+                <!--                  Response code per thread-->
+                <!--                </v-tab>-->
+                <!--                <v-tab style="color: white;" href="#restimeperapi">-->
+                <!--                  Response time per api-->
+                <!--                </v-tab>-->
+                <!--                <v-tab style="color: white;" href="#rescodeperapi">-->
+                <!--                    Response code per api-->
+                <!--                  </v-tab>-->
+              </v-tabs>
+            </template>
+          </v-toolbar>
+
+          <v-tabs-items v-model="model">
+
+            <v-tab-item value="resperthread">
+              <v-card flat>
+                <v-card-text>
+                  <apexchart type=line :options="chartOptions" :series="userPerTransaction" />
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+
+
+            <v-tab-item value="rescodeperthread">
+              <v-card flat>
+                <v-card-text>
+                  <apexchart type=line :options="chartOptions" :series="responseCodePerThread" />
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+
+            <v-tab-item value="restimeperapi">
+              <v-card flat>
+                <v-card-text>
+                  <apexchart type=line :options="chartOptions" :series="responseTimePerApi" />
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+
+            <v-tab-item value="rescodeperapi">
+              <v-card flat>
+                <v-card-text>
+                  <apexchart type=line :options="chartOptions" :series="responseCodePerApi" />
+                </v-card-text>
+              </v-card>
+            </v-tab-item>
+
+
+
+
+          </v-tabs-items>
+        </v-card>
+
+      </v-content>
+    </v-app>
+  </div>
+
+
+  <script>
+
+    function getRandomColor() {
+      var colors = [];
+      while (colors.length < 1000) {
+        do {
+          var color = Math.floor((Math.random() * 1000000) + 1);
+        } while (colors.indexOf(color) >= 0);
+        colors.push("#" + ("000000" + color.toString(16)).slice(-6));
+      }
+      return colors;
+    }
+    var randomcolors = getRandomColor();
+
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      components: {
+        apexchart: VueApexCharts,
+      },
+      computed: {
+        // a computed getter
+        series: function () {
+
+          var responsedata = [];
+          for (var i = 0; i < csvdata.length; i++) {
+            responsedata.push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseTimeAtMillis]);
+          }
+          return [
+            {
+              name: "response time",
+              data: responsedata
+            }
+          ]
+        },
+        //response codes
+        responseCodes: function () {
+
+          var responsedata = [];
+          for (var i = 0; i < csvdata.length; i++) {
+            responsedata.push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseCode]);
+          }
+          return [
+            {
+              name: "Response Codes",
+              data: responsedata
+            }
+          ]
+        },
+        // User per transaction
+        userPerTransaction: function () {
+
+          var responsedata = [];
+          var transaction_dictionary = {};
+
+          //Format the data
+          for (var i = 0; i < csvdata.length; i++) {
+            if (transaction_dictionary['' + csvdata[i].ThreadName] == undefined) {
+              transaction_dictionary['' + csvdata[i].ThreadName] = [];
+              transaction_dictionary['' + csvdata[i].ThreadName].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseTimeAtMillis]);
+            } else {
+              transaction_dictionary['' + csvdata[i].ThreadName].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseTimeAtMillis]);
+            }
+          }
+          //Create the series
+          var transaction_dictionary_keys = Object.keys(transaction_dictionary);
+          for (var i = 0; i < transaction_dictionary_keys.length; i++) {
+            responsedata.push(
+              {
+                name: transaction_dictionary_keys[i],
+                data: transaction_dictionary['' + transaction_dictionary_keys[i]]
+              }
+            );
+          }
+
+          return responsedata;
+        },
+        // response code per thread
+        responseCodePerThread: function () {
+
+          var responsedata = [];
+          var transaction_dictionary = {};
+
+          //Format the data
+          for (var i = 0; i < csvdata.length; i++) {
+            if (transaction_dictionary['' + csvdata[i].ThreadName] == undefined) {
+              transaction_dictionary['' + csvdata[i].ThreadName] = [];
+              transaction_dictionary['' + csvdata[i].ThreadName].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseCode]);
+            } else {
+              transaction_dictionary['' + csvdata[i].ThreadName].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseCode]);
+            }
+          }
+          //Create the series
+          var transaction_dictionary_keys = Object.keys(transaction_dictionary);
+          for (var i = 0; i < transaction_dictionary_keys.length; i++) {
+            responsedata.push(
+              {
+                name: transaction_dictionary_keys[i],
+                data: transaction_dictionary['' + transaction_dictionary_keys[i]]
+              }
+            );
+          }
+          return responsedata;
+        },
+        //response time per api
+        responseTimePerApi: function () {
+
+          var responsedata = [];
+          var transaction_dictionary = {};
+
+          //Format the data
+          for (var i = 0; i < csvdata.length; i++) {
+            if (transaction_dictionary['' + csvdata[i].RequestURL] == undefined) {
+              transaction_dictionary['' + csvdata[i].RequestURL] = [];
+              transaction_dictionary['' + csvdata[i].RequestURL].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseTimeAtMillis]);
+            } else {
+              transaction_dictionary['' + csvdata[i].RequestURL].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseTimeAtMillis]);
+            }
+          }
+          //Create the series
+          var transaction_dictionary_keys = Object.keys(transaction_dictionary);
+          for (var i = 0; i < transaction_dictionary_keys.length; i++) {
+            responsedata.push(
+              {
+                name: transaction_dictionary_keys[i],
+                data: transaction_dictionary['' + transaction_dictionary_keys[i]]
+              }
+            );
+          }
+          return responsedata;
+        },
+        //response code per api
+        responseCodePerApi: function () {
+
+          var responsedata = [];
+          var transaction_dictionary = {};
+
+          //Format the data
+          for (var i = 0; i < csvdata.length; i++) {
+            if (transaction_dictionary['' + csvdata[i].RequestURL] == undefined) {
+              transaction_dictionary['' + csvdata[i].RequestURL] = [];
+              transaction_dictionary['' + csvdata[i].RequestURL].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseCode]);
+            } else {
+              transaction_dictionary['' + csvdata[i].RequestURL].push([csvdata[i].ResponseReceivedAtMillis, csvdata[i].ResponseCode]);
+            }
+          }
+          //Create the series
+          var transaction_dictionary_keys = Object.keys(transaction_dictionary);
+          for (var i = 0; i < transaction_dictionary_keys.length; i++) {
+            responsedata.push(
+              {
+                name: transaction_dictionary_keys[i],
+                data: transaction_dictionary['' + transaction_dictionary_keys[i]]
+              }
+            );
+          }
+          return responsedata;
+        },
+
+      },
+
+      methods: {
+
+
+      },
+      data: {
+
+        chartOptions: {
+          chart: {
+            shadow: {
+              enabled: true,
+              color: '#000',
+              top: 18,
+              left: 7,
+              blur: 10,
+              opacity: 100
+            },
+            toolbar: {
+              show: true
+            }
+          },
+          colors: randomcolors,
+          dataLabels: {
+            enabled: true,
+          },
+          stroke: {
+            curve: 'smooth'
+          },
+          title: {
+            text: 'Response time',
+            align: 'left'
+          },
+          grid: {
+            borderColor: '#e7e7e7',
+            row: {
+              colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+              opacity: 0.5
+            },
+          },
+          markers: {
+
+            size: 6
+          },
+          xaxis: {
+            type: "datetime"
+            ,
+            labels: {
+              show: true,
+              formatter: function (val) {
+                return new Date(val).toLocaleTimeString();
+              }
+            },
+            yaxis: {
+              title: {
+                text: 'Response time (ms)'
+              }
+            }
+
+          },
+          legend: {
+            position: 'bottom',
+          }
+        },
+
+
+        model: 'tab-1'
+
+      }
+
+
+    })
+
+
+  </script>
+</body>
+
+</html>

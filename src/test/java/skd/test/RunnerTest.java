@@ -29,7 +29,7 @@ public class RunnerTest {
 
 
 
-    public static void main(String[] arg)
+    public static void main(String[] arg) throws Exception
     {
         System.out.println("load 1 start");
         LoadDirector.registerTask(TemplateScript.class);

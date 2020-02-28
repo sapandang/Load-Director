@@ -61,6 +61,7 @@ public  class Task extends Thread {
     public void _testCompleted()
     {
         requests.closeDispatcher();
+        this.stop();
     }
 
     public void LOG(Object message)
