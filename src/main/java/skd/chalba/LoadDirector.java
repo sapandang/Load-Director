@@ -477,19 +477,18 @@ public static void loadjars()
         //Read from csv file
         LoadProp loadProp = (LoadProp) taskClass.getAnnotation(LoadProp.class);
         //check if prop file value provided or not
-        if(!loadProp.value().equalsIgnoreCase(""))
-        {
-            Logger.info("Load thread count from property file "+loadProp.value());
-            PropReader propReader = new PropReader(loadProp.value());
-            //prop file exist so get the thread count value
-            if(!threadCount.fromProp().equalsIgnoreCase(""))
-            {
-                //key has been provided so look for the value
-                String threadCountKey = propReader.getProperty(threadCount.fromProp());
-                _threadCount = Integer.parseInt(threadCountKey);
+        if(loadProp != null) {
+            if (!loadProp.value().equalsIgnoreCase("")) {
+                Logger.info("Load thread count from property file " + loadProp.value());
+                PropReader propReader = new PropReader(loadProp.value());
+                //prop file exist so get the thread count value
+                if (!threadCount.fromProp().equalsIgnoreCase("")) {
+                    //key has been provided so look for the value
+                    String threadCountKey = propReader.getProperty(threadCount.fromProp());
+                    _threadCount = Integer.parseInt(threadCountKey);
+                }
             }
         }
-
 
         Logger.info("threadCount "+threadCount.value());
        // Logger.info("taskName "+taskName.value());
