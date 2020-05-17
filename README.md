@@ -32,7 +32,7 @@ Chalba help menu should be visible
 ## Getting Started.
 Create your working directory and enter the following command
 ```bash
-chalba -newFile
+ldr -newFile
 ```
 It will generate file name ***Task1.java*** in the current directory. Use this file as template to write your scripts.
 > Refactor this file name to yours because every time -newFile is executed it will generate file with name Task1.java
