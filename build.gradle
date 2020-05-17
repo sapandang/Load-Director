@@ -16,13 +16,13 @@ repositories {
 }
 
 jar {
-    baseName = 'chalba'
+    baseName = 'ldr'
 }
 
 
 application {
     mainClassName = 'skd.chalba.LoadDirector'
-    applicationName = 'chalba'
+    applicationName = 'ldr'
 
 }
 

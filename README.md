@@ -1,12 +1,12 @@
-# Chalba - Code the load
-Chalba is open source hackable load testing tool inspired from jmeter, gatling, grinder to write complex load scenerio.
+# Load Director - Code the load
+Load Director is open source hackable load testing tool inspired from jmeter, gatling, grinder to write complex load scenerio.
 
 ## Install
 ##### requirements
 * java jdk 1.8.* must be installed.
 * JAVA_HOME is set and it must point to jdk
 ##### Download the chalba binary
-* link: https://github.com/sapandang/chalba/releases/
+* link: https://github.com/sapandang/Load-Director/releases
 
 ##### Extract the zip or tar
 After extracting the following directory will be created.

@@ -20,5 +20,6 @@
 * added taskStart from class
 * set default read and connect timeout to 1hr
 * added set timeout and readtimeout
+* Renaming the app LoadDirector
 
  
