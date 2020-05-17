@@ -22,4 +22,5 @@
 * added set timeout and readtimeout
 * Renaming the app LoadDirector
 
- 
+# V1.4
+* FIX : running classes without package name

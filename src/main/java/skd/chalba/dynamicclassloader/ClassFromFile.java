@@ -30,10 +30,23 @@ public class ClassFromFile {
         //String className = "chalba."+file.getName().replaceAll(".java","");
         String javaCode = FileUtils.readFileToString(file, "utf-8");
 
-        CompilationUnit compilationUnit = StaticJavaParser.parse(javaCode);
-        Optional<PackageDeclaration> classA = compilationUnit.getPackageDeclaration();
-        String packageName  = classA.get().getName().toString();
-        String className = packageName+"."+file.getName().replaceAll(".java","");
+
+        String className=file.getName().replaceAll(".java","");;
+        try{
+
+            CompilationUnit compilationUnit = StaticJavaParser.parse(javaCode);
+            Optional<PackageDeclaration> classA = compilationUnit.getPackageDeclaration();
+
+            String packageName  = classA.get().getName().toString();
+            className = packageName+"."+file.getName().replaceAll(".java","");
+
+        }catch (Exception e)
+        {
+            //Lazy to catch exceptions
+            Logger.error("File does not contain package name");
+            Logger.error(e);
+        }
+
 
         //add jars to classpath
         File dir = new File("extlib");
