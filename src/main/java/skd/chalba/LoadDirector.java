@@ -524,6 +524,33 @@ public static void loadjars()
 
     }
 
+    public static String  startTask(Class taskClass)
+    {
+
+        String taskName = taskClass.getName();
+        try {
+
+            TaskRunner taskRunner = taskRunnerHashMap.get(taskName);
+            if(taskRunner!=null) {
+                taskRunner.startTasks();
+                Logger.info("starting task "+taskName);
+                return "taskStarted";
+            }else {
+                Logger.info("task not found "+taskName);
+                return "task not found";
+            }
+
+        }catch (Exception e)
+        {
+            Logger.error(e);
+            e.printStackTrace();
+            return "taskStartError "+e.getMessage();
+        }
+
+    }
+
+
+
     public static String stopTask(String taskName)
     {
         try {

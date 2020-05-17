@@ -17,5 +17,8 @@
 * added run duration arguments i.e now scripts can be run for a duration.
 * added LoadProp now thread count can be set from prop file
 * updated the help file
+* added taskStart from class
+* set default read and connect timeout to 1hr
+* added set timeout and readtimeout
 
  

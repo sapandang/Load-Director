@@ -34,8 +34,8 @@ public class Requests {
 
         cookieHelper = new CookieHelper();
         client = new OkHttpClient().newBuilder()
-//                .readTimeout(60, TimeUnit.SECONDS)
-//                .connectTimeout(60, TimeUnit.SECONDS)
+                .readTimeout(1, TimeUnit.HOURS) //default timeout
+                .connectTimeout(1, TimeUnit.HOURS) //default timeout
                 .followRedirects(false)
                 .followSslRedirects(false)
                 .cookieJar(cookieHelper.cookieJar())
@@ -61,6 +61,21 @@ public class Requests {
                 .connectTimeout(timeout, TimeUnit.MILLISECONDS)
                 .build();
     }
+
+    public void setReadTimeout(long timeout, TimeUnit unit)
+    {
+        client = client.newBuilder()
+                .readTimeout(timeout, unit)
+                .build();
+    }
+
+    public void setConnectTimeout(long timeout, TimeUnit unit)
+    {
+        client = client.newBuilder()
+                .connectTimeout(timeout, unit)
+                .build();
+    }
+
 
     public void followRedirects(boolean followRedirects)
     {
