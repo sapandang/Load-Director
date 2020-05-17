@@ -11,17 +11,17 @@ Load Director is open source hackable load testing tool inspired from jmeter, ga
 ##### Extract the zip or tar
 After extracting the following directory will be created.
 ```
-chalba/
+ldr/
 ├── bin/
-│   ├── chalba --executable for linux
-│   └── chalba.bat --executable for windows
+│   ├── ldr --executable for linux
+│   └── ldr.bat --executable for windows
 ├── lib/
-    ├── chalba.jar -- used in IDE
+    ├── ldr.jar -- used in IDE
     ├── extlib -- put your jars here
     └── contains the libraries
 ```
 ##### Set environment to path
-Add ***chalba/bin*** to the path of your os.
+Add ***ldr/bin*** to the path of your os.
 * In linux to PATH in ~/.profile
 * In windows in the environment variable
 
