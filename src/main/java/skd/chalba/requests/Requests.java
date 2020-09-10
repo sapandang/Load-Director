@@ -139,7 +139,7 @@ public class Requests {
     }
 
 
-    public void setCookieeFrom(String json){
+    public void setCookieeFromJson(String json){
 
         cookieHelper.setCookieeFromJson(json);
 

@@ -76,7 +76,7 @@ public class CookieeTest extends Task {
             System.out.println("token: " + token);
 
             String cookiex =  requests.getCookieeJson("https://qa.fareye.co/app/rest/account");
-            requests.setCookieeFrom(cookiex);
+            requests.setCookieeFromJson(cookiex);
 
 
         } catch (Exception e) {

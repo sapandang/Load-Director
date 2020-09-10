@@ -26,6 +26,5 @@
 * FIX : running classes without package name
 
 # V1.5
-* ADD EXPERIMENTAL FEATURES
-* Get and load cookiee
+* EXPERIMENTAL: Get and load cookiee
 * Supress Exception when unable to connect to server
