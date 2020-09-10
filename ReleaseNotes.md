@@ -19,8 +19,13 @@
 * updated the help file
 * added taskStart from class
 * set default read and connect timeout to 1hr
-* added set timeout and readtimeout
+* added set timeout and read timeout
 * Renaming the app LoadDirector
 
 # V1.4
 * FIX : running classes without package name
+
+# V1.5
+* ADD EXPERIMENTAL FEATURES
+* Get and load cookiee
+* Supress Exception when unable to connect to server

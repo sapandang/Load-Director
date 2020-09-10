@@ -1,5 +1,6 @@
 package skd.chalba.requests;
 
+import com.google.gson.Gson;
 import okhttp3.*;
 import okhttp3.FormBody;
 import org.tinylog.Logger;
@@ -123,6 +124,27 @@ public class Requests {
     public String getCookieeValue(String url,String key){
        return parseCookieValue(client.cookieJar().loadForRequest(HttpUrl.get(url)), key);
     }
+
+
+    public List<Cookie> getCookieeList(String url){
+        return client.cookieJar().loadForRequest(HttpUrl.get(url));
+    }
+
+
+    public String getCookieeJson(String url) throws Exception {
+        //Gson gson = new Gson();
+        //String json = gson.toJson(getCookieeList(url));
+        String json =cookieHelper.getCookieeJson();
+        return json;
+    }
+
+
+    public void setCookieeFrom(String json){
+
+        cookieHelper.setCookieeFromJson(json);
+
+    }
+
 
     /**
      * extract the cookiees from the list
@@ -302,6 +324,7 @@ public class Requests {
 
         } catch (Exception e) {
             Logger.error(e);
+            //e.printStackTrace();
         }
 
         return responseData;
@@ -439,7 +462,8 @@ public void publishToRequestListners(ResponseData responseData)
                 responseData.calculateResponseTime();
             }
             Logger.error(e);
-            throw e;
+            // :NOTE: Can be uncommented in order to show ssl or connect error to user
+            //throw e; //Stopping the errors
         } finally {
 
             publishToRequestListners(responseData);

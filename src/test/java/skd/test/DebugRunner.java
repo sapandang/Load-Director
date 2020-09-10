@@ -9,8 +9,12 @@ public class DebugRunner {
 
     public static void main(String[] args) throws Exception {
         System.out.println("Debug started..");
-        LoadDirector.registerTask(Task1.class);
-        String result =   LoadDirector.startTask("skd.test.Task1");
+
+
+        LoadDirector loadDirector = new LoadDirector();
+        loadDirector.registerTask(CookieeTest.class);
+        loadDirector.startTask(CookieeTest.class);
+
 
 
     }
