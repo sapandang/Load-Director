@@ -50,19 +50,7 @@ dependencies {
     // https://mvnrepository.com/artifact/net.openhft/compiler
     compile group: 'net.openhft', name: 'compiler', version: '2.0'
 
-    //jetty server dependency
-    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server
-    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.14.v20181114'
-    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet
-    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.14.v20181114'
-    //https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-webapp
-    compile group: 'org.eclipse.jetty', name: 'jetty-webapp', version: '9.4.14.v20181114'
-    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-util
-    compile group: 'org.eclipse.jetty', name: 'jetty-util', version: '9.4.14.v20181114'
-    //https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlets
-    compile group: 'org.eclipse.jetty', name: 'jetty-servlets', version: '9.4.14.v20181114'
-    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-http
-    compile group: 'org.eclipse.jetty', name: 'jetty-http', version: '9.4.14.v20181114'
+    compile "com.sparkjava:spark-core:2.9.2"
 
     //okhttp
     //compile 'com.squareup.okhttp3:okhttp:3.14.4'

@@ -22,6 +22,7 @@ public class TaskRunner {
     public String taskClassName="";
 
 
+
     ArrayList<Object> threadTrackerArrayList = new ArrayList<>();
 
     public TaskRunner(Class taskClass, int totalThreads, String taskName, long delayBetweenThreads) {
@@ -68,7 +69,52 @@ public class TaskRunner {
             Constructor<?> tmpClassConstructor = taskClass.getConstructor(TaskParams.class);
             Object tmpTaskObject = tmpClassConstructor.newInstance(taskParams);
 
-             java.lang.reflect.Method startMethod = tmpTaskObject.getClass().getMethod("start");
+            java.lang.reflect.Method startMethod = tmpTaskObject.getClass().getMethod("start");
+            startMethod.invoke(tmpTaskObject);
+            threadTrackerArrayList.add(tmpTaskObject);
+
+            Thread.sleep(this.delayBetweenThreads);
+            //Thread.sleep(Config.THREAD_SPAWN_DELAY); //HACK UNTIL  THREAD UI MADE
+        }
+    }
+
+    public void startTasks(int numberOfThread) throws Exception {
+
+        //check if task is already running or not
+//        if(taskStatus.toLowerCase().equals("running"))
+//        {
+//            return;
+//        }
+
+        taskStatus="running";
+        //start the threads
+        for(int i=0;i<numberOfThread;i++)
+        {
+            //if taskRunner stopped in middle
+            if(taskStatus.toLowerCase().equals("stop"))
+            {
+                return;
+            }
+
+            Logger.info("Starting thread "+(i+1));
+
+            TaskParams taskParams = new TaskParams();
+            taskParams._ThreadCount=totalThreads;
+            taskParams._ThreadIndex=(i+1);
+            taskParams._TaskName=taskName;
+            taskParams._ThreadSpwanDelay=delayBetweenThreads;
+
+            //spwan 1
+            // Constructor<?> tmpClassConstructor = taskClass.getConstructor(int.class, int.class);
+            // Object tmpTaskObject = tmpClassConstructor.newInstance(1, 1);
+
+
+            //TODO : First need to deprecate the above function
+            //spwan 2
+            Constructor<?> tmpClassConstructor = taskClass.getConstructor(TaskParams.class);
+            Object tmpTaskObject = tmpClassConstructor.newInstance(taskParams);
+
+            java.lang.reflect.Method startMethod = tmpTaskObject.getClass().getMethod("start");
             startMethod.invoke(tmpTaskObject);
             threadTrackerArrayList.add(tmpTaskObject);
 

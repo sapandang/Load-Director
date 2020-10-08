@@ -9,10 +9,7 @@ import org.json.JSONArray;
 import org.tinylog.Logger;
 import skd.chalba.dynamicclassloader.ClassFromFile;
 import skd.chalba.elements.PropReader;
-import skd.chalba.interfaces.LoadProp;
-import skd.chalba.interfaces.ThreadCount;
-import skd.chalba.interfaces.ThreadSpawnDelay;
-import skd.chalba.interfaces.TimeoutCallback;
+import skd.chalba.interfaces.*;
 import skd.chalba.runner.*;
 import skd.chalba.server.ReporterSocket;
 import spark.Request;
@@ -51,6 +48,13 @@ public class LoadDirector {
   public static String currentDirectory = System.getProperty("user.dir");
   public static String extlibDir;
 
+
+  //Vars
+    public static boolean isServerModeEnable = false;
+    public static int serverPort = 8080;
+
+
+
    static HashMap<String, TaskRunner> taskRunnerHashMap = new HashMap<>();
 
     public static void main(String[] arg) throws Exception {
@@ -88,7 +92,15 @@ public class LoadDirector {
         }
 
         commandParser(arg);
-        loadFileAndRun();
+
+        if(isServerModeEnable)
+        {
+            loadFileAndStartServer();
+        }else {
+            loadFileAndRun();
+
+        }
+
         //StartServer(); //TODO : need to change to work as library
         Logger.info("server started.... SERVER MODE is still in alpha stage");
 
@@ -108,6 +120,8 @@ public class LoadDirector {
             // add option "-newFile"
             options.addOption("newFile", false, "will generate new template file in the current directory");
 
+            options.addOption("s", true, "will start server mode");
+
             //***Parsing Stage***
             //Create a parser
             CommandLineParser parser = new DefaultParser();
@@ -124,8 +138,15 @@ public class LoadDirector {
             {
                 Logger.info("Generating new File");
                 generateTemplateFile();
-
             }
+
+            if(cmd.hasOption("s"))
+            {
+                isServerModeEnable=true;
+                Logger.info("sarting server mode in port "+cmd.getOptionValue("s"));
+                serverPort=Integer.parseInt(cmd.getOptionValue("s"));
+            }
+
 
         } catch (Exception e) {
 
@@ -155,8 +176,73 @@ public class LoadDirector {
             startTask(taskclass.getName());
         }
 
+    }
+
+    public static void loadFileAndStartServer() throws Exception
+    {
+
+
+        String taskFile;
+        Class taskclass = null;
+        //load the commnad line file
+        if(cmd.hasOption("f"))
+        {
+            taskFile = cmd.getOptionValue("f");
+            File file = new File(taskFile);
+            Logger.info("file "+file.getAbsolutePath());
+
+            //register the task
+             taskclass =  ClassFromFile.getClassFromFile(file);
+            registerTask(taskclass);
+        }
+
+        //setting up the server
+        port(serverPort);
+
+        get("/", (req, res) ->
+        {
+            return "LOAD DIRECTOR SERVER RUNNING" +
+                    "call /start?th=12  : number of threads";
+        });
+
+        Class finalTaskclass = taskclass;
+        get("/start", (req, res) ->
+        {
+            String message="";
+            String threadquery =  req.queryParams("th");
+
+            message+="Starting threads "+threadquery;
+
+            try {
+
+                TaskRunner taskRunner = taskRunnerHashMap.get(finalTaskclass.getName());
+                if(taskRunner!=null) {
+                    taskRunner.startTasks(Integer.parseInt(threadquery));
+                    Logger.info("starting task "+finalTaskclass.getName());
+                    return "taskStarted "+message;
+                }else {
+                    Logger.info("task not found "+finalTaskclass.getName());
+                    return "task not found "+message;
+                }
+
+            }catch (Exception e)
+            {
+                Logger.error(e);
+                e.printStackTrace();
+                return "taskStartError "+e.getMessage();
+            }
+
+
+
+
+        });
+
+
+
+
 
     }
+
 
 
     public static void generateTemplateFile() throws IOException {
@@ -233,8 +319,8 @@ public static void loadjars()
         port(8080);
         setupRoutes();
         setFilters();
-        webSocket("/echo", ReporterSocket.class);
-        init();
+        //webSocket("/echo", ReporterSocket.class);
+        //init();
 
         //setUp exclude path
         excludeArrayList = new ArrayList<>();
@@ -242,23 +328,6 @@ public static void loadjars()
         excludeArrayList.add("/img");
         excludeArrayList.add("/filters");
 
-        //TODO: remove the commented code when new server fully implemented
-        /*Server server = new Server(8080);
-        ServletHandler servletHandler = new ServletHandler();
-        server.setHandler(servletHandler);
-
-        servletHandler.addServletWithMapping(HomeServlet.class, "/");
-
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/");
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/tasklist");
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/start");
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/stop");
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/getprops");
-        servletHandler.addServletWithMapping(ApiServlet.class, "/api/saveprops");
-        servletHandler.addServletWithMapping(JVMStatsServlet.class, "/api/jvmstats");
-
-        server.start();
-        server.join();*/
     }
 
     public static void setupRoutes(){
@@ -302,122 +371,8 @@ public static void loadjars()
     }
 
 
-    public static class HomeServlet extends HttpServlet
-    {
-
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-        {
-            response.setContentType("text/html");
-            response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println(FileUtils.readFileToString(new java.io.File("server/index.html")));
-        }
-    }
 
 
-    public static class JVMStatsServlet extends HttpServlet
-    {
-
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-        {
-            response.setContentType("text/html");
-            response.setStatus(HttpServletResponse.SC_OK);
-            response.getWriter().println(JVMStats.getJVMStats());
-        }
-    }
-
-    public static class ApiServlet extends  HttpServlet
-    {
-
-        protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException
-        {
-            Logger.info(" "+request.getServletPath());
-
-            response.setContentType("text/html");
-            response.setStatus(HttpServletResponse.SC_OK);
-
-            //send the taskList
-            if(request.getServletPath().toLowerCase().equals("/api/tasklist"))
-            {
-                response.getWriter().println(getTaskDetails());
-                return;
-            }
-
-
-            //start the task
-            if(request.getServletPath().toLowerCase().equals("/api/start"))
-            {
-                String taskName = request.getParameter("task");
-                Logger.info("starting task name "+taskName);
-
-                if(taskName!=null)
-                {
-
-                    response.getWriter().println( startTask(taskName));
-                }else {
-                    response.getWriter().println("task not found");
-                }
-
-                return;
-            }
-
-
-            //start the task
-            if(request.getServletPath().toLowerCase().equals("/api/stop"))
-            {
-                String taskName = request.getParameter("task");
-                Logger.info("stopping task name "+taskName);
-
-                if(taskName!=null)
-                {
-
-                    response.getWriter().println(stopTask(taskName));
-                }else {
-                    response.getWriter().println("task not found");
-                }
-
-                return;
-            }
-
-            //get the properties
-            if(request.getServletPath().toLowerCase().equals("/api/getprops"))
-            {
-                //response.getWriter().println(""+getConfigProperty());
-
-                return;
-            }
-
-
-            response.getWriter().println("404");
-        }
-
-        //================================================
-        //=========== post method ========================
-        //=================================================
-
-
-
-        protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-            Logger.info(" "+request.getServletPath());
-
-            response.setContentType("text/html");
-            response.setStatus(HttpServletResponse.SC_OK);
-
-            //save the properties
-            if(request.getServletPath().toLowerCase().equals("/api/saveprops"))
-            {
-                //get the body: JAVA8 only
-                String requestBody = request.getReader().lines().collect(Collectors.joining(System.lineSeparator()));
-                Logger.info("props received "+requestBody);
-                //saveConfigProperty(requestBody);
-               // response.getWriter().println(""+getConfigProperty());
-                return;
-            }
-
-
-            response.getWriter().println("404");
-        }
-    }
 
 
 
@@ -489,6 +444,16 @@ public static void loadjars()
                 }
             }
         }
+
+
+        //BATCH spawning OF THREADS
+        ThreadBatchSpawnDelay threadBatchSpawnDelay = (ThreadBatchSpawnDelay)  taskClass.getAnnotation(ThreadBatchSpawnDelay.class);
+        if(threadBatchSpawnDelay != null)
+        {
+
+        }
+
+
 
         Logger.info("threadCount "+threadCount.value());
        // Logger.info("taskName "+taskName.value());
