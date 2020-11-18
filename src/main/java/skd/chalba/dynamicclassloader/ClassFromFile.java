@@ -77,7 +77,7 @@ public class ClassFromFile {
         }
 
 
-       Class taskClass = CompilerUtils.loadFromJava(className, javaCode);
+       Class taskClass = CompilerUtils.CACHED_COMPILER.loadFromJava(className, javaCode);
        return taskClass;
 
     }

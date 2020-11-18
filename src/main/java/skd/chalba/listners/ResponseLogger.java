@@ -18,18 +18,18 @@ public class ResponseLogger implements RequestsListners {
         if(!logOnce)
         {
             //print the headers
-//            Logger.tag("RESPONSE").debug("ThreadName"+"|"+
-//                    "ResponseCode"+"|"+
-//                    "StatusMessage"+"|"+
-//                    "RequestURL"+"|"+
-//                    "RequestSentAtMillis"+"|"+
-//                    "ResponseReceivedAtMillis"+"|"+
-//                    "ResponseSendTime"+"|"+
-//                    "ResponseReceivedTime"+"|"+
-//                    "ResponseTimeAtMillis");
+            Logger.tag("RESPONSE").debug("ThreadName"+"|"+
+                    "ResponseCode"+"|"+
+                    "StatusMessage"+"|"+
+                    "RequestURL"+"|"+
+                    "RequestSentAtMillis"+"|"+
+                    "ResponseReceivedAtMillis"+"|"+
+                    "ResponseSendTime"+"|"+
+                    "ResponseReceivedTime"+"|"+
+                    "ResponseTimeAtMillis");
             //header printed
 
-            Logger.tag("RESPONSE").debug("timeStamp," +
+            Logger.tag("RESPONSE2").debug("timeStamp," +
                     "elapsed," +
                     "label," +
                     "responseCode," +
@@ -50,15 +50,15 @@ public class ResponseLogger implements RequestsListners {
 
         long startTime = System.currentTimeMillis();
 
-//        Logger.tag("RESPONSE").debug(response.getThreadName()+"|"+
-//                response.code+"|"+
-//                response.message+"|"+
-//                response.url+"|"+
-//                response.sentRequestAtMillis+"|"+
-//                response.receivedResponseAtMillis+"|"+
-//                response.sendTimeStamp+"|"+
-//                response.receivedTimeStamp+"|"+
-//                response.responseTimeAtMillis);
+        Logger.tag("RESPONSE").debug(response.getThreadName()+"|"+
+                response.code+"|"+
+                response.message+"|"+
+                response.url+"|"+
+                response.sentRequestAtMillis+"|"+
+                response.receivedResponseAtMillis+"|"+
+                response.sendTimeStamp+"|"+
+                response.receivedTimeStamp+"|"+
+                response.responseTimeAtMillis);
 
         try{
 
@@ -71,7 +71,7 @@ public class ResponseLogger implements RequestsListners {
                 success = "false";
                 failureMessage= escapeSpecialCharacters(response.body);
             }
-            Logger.tag("RESPONSE").debug(response.receivedResponseAtMillis+","
+            Logger.tag("RESPONSE2").debug(response.receivedResponseAtMillis+","
                     +response.responseTimeAtMillis+","
                     +label+","+
                     response.code+","+
