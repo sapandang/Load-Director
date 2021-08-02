@@ -31,3 +31,6 @@
 
 # V1.6
 * added support for conent-type in multipart form data
+
+# V1.6.1
+* Fixed: added support for conent-type in multipart form data

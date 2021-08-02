@@ -17,7 +17,7 @@ public class MultiPartFormBody {
     {
         FileStruct fileStruct = new FileStruct();
         fileStruct.key=key;
-        fileStruct.value=key;
+        fileStruct.value=value;
         fileData.put(key,fileStruct);
         return this;
     }
@@ -26,7 +26,7 @@ public class MultiPartFormBody {
     {
         FileStruct fileStruct = new FileStruct();
         fileStruct.key=key;
-        fileStruct.value=key;
+        fileStruct.value=value;
         fileStruct.contentType=contentType;
         fileData.put(key,fileStruct);
         return this;

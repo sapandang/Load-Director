@@ -12,8 +12,8 @@ public class DebugRunner {
 
 
         LoadDirector loadDirector = new LoadDirector();
-        loadDirector.registerTask(CookieeTest.class);
-        loadDirector.startTask(CookieeTest.class);
+        loadDirector.registerTask(MultipartTest.class);
+        loadDirector.startTask(MultipartTest.class);
 
 
 

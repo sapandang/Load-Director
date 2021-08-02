@@ -314,7 +314,7 @@ public class Requests {
                     {
                         tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
                                 RequestBody.create(MediaType.parse(fileStruct.contentType),
-                                        fileStruct.value));
+                                        fileStruct.value.getBytes()));
                     }
 
                 }

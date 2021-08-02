@@ -222,3 +222,5 @@ requests.postRaw("https://postb.in/1570772006478-3730544417630",
 ```       
 
 
+# notes
+> delay required for rpm = 1000/(rpm/60)
