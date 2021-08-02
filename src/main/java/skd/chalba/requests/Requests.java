@@ -274,15 +274,24 @@ public class Requests {
                 MultipartBody.Builder tmultiFormBodyBuilder = new MultipartBody.Builder();
                 tmultiFormBodyBuilder.setType(MultipartBody.FORM);
 
-                //parse the text data
-                HashMap<String, String> textData = multiPartFormBody.getTextData();
-                for (int i = 0; i < textData.size(); i++) {
-
-
-                    tmultiFormBodyBuilder.addFormDataPart(textData.keySet().toArray()[i].toString(),
-                            textData.get(textData.keySet().toArray()[i].toString())
-                    );
-                }
+//                //parse the text data
+//                HashMap<String, String> textData = multiPartFormBody.getTextData();
+//                for (int i = 0; i < textData.size(); i++) {
+//
+//
+//                    //file strut
+//                    MultiPartFormBody.FileStruct fileStruct = textData.get(textData.keySet().toArray()[i].toString());
+//
+//                    //=== old since new type support content type
+////                    tmultiFormBodyBuilder.addFormDataPart(textData.keySet().toArray()[i].toString(),
+////                            textData.get(textData.keySet().toArray()[i].toString())
+////                    );
+//
+//                    //=== new
+//
+//
+//
+//                }
                 //parse the file data
                 HashMap<String, MultiPartFormBody.FileStruct> fileData = multiPartFormBody.getFileData();
                 for (int i = 0; i < fileData.size(); i++) {
@@ -290,8 +299,24 @@ public class Requests {
                     //file strut
                     MultiPartFormBody.FileStruct fileStruct = fileData.get(fileData.keySet().toArray()[i].toString());
 
-                    tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
-                            RequestBody.create(null, fileStruct.file) );
+                    //=== old
+//                    tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
+//                            RequestBody.create(null, fileStruct.file) );
+
+                    //== new : setting the file
+                    if( fileStruct.type.equalsIgnoreCase("file"))
+                    {
+                        tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
+                                RequestBody.create(MediaType.parse(fileStruct.contentType),
+                                        fileStruct.file));
+                    }
+                    if( fileStruct.type.equalsIgnoreCase("text"))
+                    {
+                        tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
+                                RequestBody.create(MediaType.parse(fileStruct.contentType),
+                                        fileStruct.value));
+                    }
+
                 }
 
                 requestBody = tmultiFormBodyBuilder.build();
