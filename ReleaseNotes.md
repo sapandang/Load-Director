@@ -28,3 +28,6 @@
 # V1.5
 * EXPERIMENTAL: Get and load cookiee
 * Supress Exception when unable to connect to server
+
+# V1.6
+* added support for conent-type in multipart form data
