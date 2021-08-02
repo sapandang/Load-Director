@@ -286,7 +286,7 @@ public class Requests {
 ////                    tmultiFormBodyBuilder.addFormDataPart(textData.keySet().toArray()[i].toString(),
 ////                            textData.get(textData.keySet().toArray()[i].toString())
 ////                    );
-//
+///
 //                    //=== new
 //
 //
@@ -312,9 +312,13 @@ public class Requests {
                     }
                     if( fileStruct.type.equalsIgnoreCase("text"))
                     {
-                        tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.fileName,
-                                RequestBody.create(MediaType.parse(fileStruct.contentType),
-                                        fileStruct.value.getBytes()));
+                        if(fileStruct.contentType !=null) {
+                            tmultiFormBodyBuilder.addFormDataPart(fileStruct.key, fileStruct.fileName,
+                                    RequestBody.create(MediaType.parse(fileStruct.contentType),
+                                            fileStruct.value.getBytes()));
+                        }else {
+                            tmultiFormBodyBuilder.addFormDataPart(fileStruct.key,fileStruct.value);
+                        }
                     }
 
                 }
